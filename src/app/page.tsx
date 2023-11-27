@@ -6,6 +6,7 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Section2 from "./components/SectionSale";
 
+
 export default function Home() {
   return (
     <main>
@@ -15,9 +16,9 @@ export default function Home() {
         <Header />
         {/* <Navbar /> */}
         <Link href="/dashboard">
-          <h2 className="relative font-serif hover:font-sans  text-white text-4xl hover:scale-110 mb-4  mt-60">
+          <h1 className="relative font-serif text-white hover:font-sans   text-4xl hover:scale-110 mb-4  mt-60">
             Gagner un repas!
-          </h2>
+          </h1>
         </Link>
         <div className="mt-0">
           <Reseau />

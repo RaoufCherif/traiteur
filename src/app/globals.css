@@ -25,3 +25,22 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+
+
+
+
+@media (min-height: 100px) {
+  nav {
+   height: 190px;
+  }
+
+
+} 
+
+@media (min-height: 850px) {
+  nav {
+    height: 460px;
+   }
+ 
+ 
+}

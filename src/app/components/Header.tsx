@@ -3,7 +3,7 @@ import Button from "./Reseau";
 
 const Header = () => {
   return (
-    <nav className="bg-gray-800   h-96 ">
+    <nav className="bg-gray-800   p-4  ">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -18,11 +18,10 @@ const Header = () => {
               <span className="sr-only">Open main menu</span>
               {/* <!--
             Icon when menu is closed.
-
             Menu open: "hidden", Menu closed: "block"
           --> */}
               <svg
-                className="block h-6 w-6"
+                className="block h-6 w-96"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
@@ -48,6 +47,7 @@ const Header = () => {
                 stroke="currentColor"
                 aria-hidden="true"
               >
+                
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -56,10 +56,10 @@ const Header = () => {
               </svg>
             </button>
           </div>
-          <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 items-center">
+          <div className="flex flex-1 items-left justify-center sm:items-stretch sm:justify-start">
+            <div className="flex flex-shrink-0 w-96  left-0    ">
               <img
-                className="h-8 w-auto"
+                className="h-8 w-auto "
                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                 alt="Your Company"
               />
@@ -98,7 +98,7 @@ const Header = () => {
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <button
               type="button"
-              className="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              className="relative rounded-full bg-gray-800 p-3 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
             >
               LogIn
             </button>
