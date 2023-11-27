@@ -13,7 +13,7 @@ function SectionSale() {
 
       <h2 className="my-14  font-serif hover:font-sans  text-white text-4xl ">
         {" "}
-        Mini Salé Fait Maison
+        Mini Salés Faits Maison
       </h2>
 
       <Image src={snack1} width="1977" height="459" alt="background image" />
@@ -30,26 +30,26 @@ function SectionSale() {
 
         <div className=" flex flex-col items-center gap-4">
           <h4 className="  font-serif hover:font-sans  text-white text-lg">Min Burger</h4>
-          <Image src={mini_burger} width="120" height="150" alt="burger" />
+          <Image src={mini_burger} width="170"  alt="burger" />
         </div>
 
         <div className=" flex flex-col items-center gap-4">
           <h4 className="  font-serif hover:font-sans  text-white text-lg">Min Pizza</h4>
-          <Image src={mini_piza} width="150" height="150" alt="pizza" />
+          <Image src={mini_piza} width="170" alt="pizza" />
         </div>
 
         <div  className=" flex flex-col items-center gap-4">
           <h4 className="  font-serif hover:font-sans  text-white text-lg"> Mini Brics</h4>
-          <Image src={mini_brics} width="170" height="170" alt="brics" />
+          <Image src={mini_brics} width="170"  alt="brics" />
         </div>
 
         <div  className=" flex flex-col items-center gap-4">
           <h4 className="  font-serif hover:font-sans  text-white text-lg "> Mini Rols</h4>
-          <Image src={mini_rols} width="150" height="150" alt="rols" />
+          <Image src={mini_rols} width="170"  alt="rols" />
         </div>
         <div  className=" flex flex-col items-center gap-4">
-          <h4 className="  font-serif hover:font-sans  text-white text-lg"> Mini Croissants</h4>
-          <Image src={mini_croissants} width="110" alt="croissants" />
+          <h4 className="font-serif  hover:font-sans  text-white text-lg "> Mini Croissants</h4>
+          <Image src={mini_croissants} width="150"  alt="croissants" />
         </div>
 
       </div>
