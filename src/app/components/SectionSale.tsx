@@ -5,10 +5,31 @@ import mini_burger from "../../../public/mini_burger.jpg";
 import mini_rols from "../../../public/mini_rol.jpg";
 import mini_piza from "../../../public/mini_pizza.jpg";
 import mini_brics from "../../../public/mini_brics.jpeg"
-import mini_croissants from "../../../public/mini_croissant.jpeg"
+import mini_croissants from "../../../public/mini_croissant.jpeg";
+import {  fetchData } from "../../../util/getSales";
+
+
+
+
+
+
 function SectionSale() {
-  return (
-    <section className=" bg-rose-300 ">
+
+
+
+let data = fetchData();
+let name= ""
+
+for (let i = 0 ; i < data.length ; i++) {
+
+   name = data[0].name
+
+}
+
+
+  return (    <section className=" bg-rose-300 ">
+
+
     <div className="flex flex-col  items-center">
 
       <h2 className="my-14  font-serif hover:font-sans  text-white text-4xl ">
@@ -19,7 +40,7 @@ function SectionSale() {
       <Image src={snack1} width="1977" height="459" alt="background image" />
       <h2 className="mt-20  font-serif hover:font-sans  text-white text-4xl ">
         {" "}
-        Cinq types de salé
+        Cinq types de salés
       </h2>
       <h6 className="mb-20  font-serif hover:font-sans  text-white  ">
         {" "}
@@ -28,29 +49,18 @@ function SectionSale() {
 
       <div className="flex flex-raw gap-10 mb-20" >
 
-        <div className=" flex flex-col items-center gap-4">
-          <h4 className="  font-serif hover:font-sans  text-white text-lg">Min Burger</h4>
-          <Image src={mini_burger} width="170"  alt="burger" />
-        </div>
+      {data.map((item,index)=>{
+         return (
+        //  <li key={index}>{item}</li>
+<>
+         <div className=" flex flex-col items-center gap-4">
+         <h4 className="  font-serif hover:font-sans  text-white text-lg" key={index}>{item.name}</h4>
+         <Image  src={"/"+ item.image} width="170"  height="150" alt="burger" />
+       </div>
+       </>
+         )
+     })}
 
-        <div className=" flex flex-col items-center gap-4">
-          <h4 className="  font-serif hover:font-sans  text-white text-lg">Min Pizza</h4>
-          <Image src={mini_piza} width="170" alt="pizza" />
-        </div>
-
-        <div  className=" flex flex-col items-center gap-4">
-          <h4 className="  font-serif hover:font-sans  text-white text-lg"> Mini Brics</h4>
-          <Image src={mini_brics} width="170"  alt="brics" />
-        </div>
-
-        <div  className=" flex flex-col items-center gap-4">
-          <h4 className="  font-serif hover:font-sans  text-white text-lg "> Mini Rols</h4>
-          <Image src={mini_rols} width="170"  alt="rols" />
-        </div>
-        <div  className=" flex flex-col items-center gap-4">
-          <h4 className="font-serif  hover:font-sans  text-white text-lg "> Mini Croissants</h4>
-          <Image src={mini_croissants} width="150"  alt="croissants" />
-        </div>
 
       </div>
 

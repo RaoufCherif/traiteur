@@ -1,13 +1,20 @@
+
 import Image from "next/image";
 import Header from "./components/Header";
 import trois_plats from "public/trois_plats.jpg";
 import Reseau from "./components/Reseau";
 import Link from "next/link";
-import Navbar from "./components/Navbar";
-import Section2 from "./components/SectionSale";
+import SectionSale from "./components/SectionSale";
 
+
+
+
+ 
 
 export default function Home() {
+ 
+
+  
   return (
     <main>
       <div className=" flex min-h-screen flex-col justify-start  items-center  ">
@@ -26,7 +33,7 @@ export default function Home() {
       </div>
 
       <div>
-        <Section2 />
+        <SectionSale />
       </div>
     </main>
   );
