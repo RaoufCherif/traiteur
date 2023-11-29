@@ -3,7 +3,17 @@ import Button from "./Reseau";
 
 const Header = () => {
   return (
+    <div className="flex flex-col ">
+    <div className=" absolute left-0 ml-8 mt-8     ">
+    <img
+      className="h-8 w-auto "
+      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+      alt="Your Company"
+    />
+  </div>
+
     <nav className="bg-gray-800   p-4  ">
+       
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -56,14 +66,12 @@ const Header = () => {
               </svg>
             </button>
           </div>
+
+        
+
+
           <div className="flex flex-1 items-left justify-center sm:items-stretch sm:justify-start">
-            <div className="flex flex-shrink-0 w-96  left-0    ">
-              <img
-                className="h-8 w-auto "
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                alt="Your Company"
-              />
-            </div>
+          
             <div className="hidden sm:ml-6 sm:block">
               <div className="flex space-x-4">
                 {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
@@ -106,6 +114,7 @@ const Header = () => {
         </div>
       </div>
     </nav>
+    </div>
   );
 };
 
