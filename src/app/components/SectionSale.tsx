@@ -8,27 +8,11 @@ import mini_brics from "../../../public/mini_brics.jpeg"
 import mini_croissants from "../../../public/mini_croissant.jpeg";
 import {  fetchData } from "../../../util/getSales";
 
-
-
-
-
-
 function SectionSale() {
 
-
-
 let data = fetchData();
-let name= ""
-
-for (let i = 0 ; i < data.length ; i++) {
-
-   name = data[0].name
-
-}
-
 
   return (    <section className=" bg-rose-300 ">
-
 
     <div className="flex flex-col  items-center">
 
@@ -60,14 +44,8 @@ for (let i = 0 ; i < data.length ; i++) {
        </>
          )
      })}
-
-
       </div>
-
     </div>
-
-
-
         <div className=" mt-10 flex flex-col  items-center">
           <h2  className=" font-serif hover:font-sans  text-white text-4xl ">35€ pour 40 pièces</h2>
           <h6 className="mb-20  font-serif hover:font-sans text-white ">8 pièces de chaque types</h6>
