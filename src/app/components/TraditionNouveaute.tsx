@@ -2,30 +2,30 @@ import React from 'react'
 import Image from 'next/image';
 import palm from "../../../public/palm.jpg"
 import hmis from "../../../public/hmis .jpg"
+import { Ephesis } from 'next/font/google'
+ 
 
 function TraditionNouveaute() {
   return (
-    <section className=' flex flex-col gap-4 mt-12 justify-center  items-center  '>
-     
-    <h2 className='relative z-50 flex justify-center mt-4 text-green-700'> Tradition & Nouveauté</h2>
-
-    <div className='flex flex-row justify-center items-center w-96 gap-120 mt-12 '>
-
-        <div className='absolute  '>
-        <Image src={palm} alt="palm" className='absolute  w-1/2 z-0' />
-        <Image src={hmis} alt="hmiss"  className='relative w-1/3  mt-48 ml-12 z-50 rounded-xl' />
-        </div>
-
-        <div className='flex flex-col justify-center items-center w-120 gap-4  '>
-            <h2 className='z-50 text-green-700'>Hmiss dit Felfel</h2>
-            <p className='z-50 text-green-700'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias molestias id exercitationem? Officiis, error dolores libero accusantium voluptates laboriosam dignissimos, blanditiis quae tempore sapiente magni! Molestias rerum exercitationem repellat obcaecati?
+    <section className="  flex flex-col justify-center items-center ">
+        <h2 className='p-4 m-16 font-serif hover:font-sans text-green-700 text-4xl '> Tradition & Nouveauté </h2>
+        <div className='mb-16 flex flex-row max-w-4xl'>
+            <Image id='image_rice' src={palm}  alt="background image"  className=' w-72 rounded-xl '/>
+            <Image  src={hmis}  alt="background image"  className='absolute w-1/5 rounded-xl ml-12 mt-24'/>
+            <div>
+             <div className='flex flex-col  items-center  gap-4  m-4 p-4 '>
+            <h2 className=' text-green-700'>HMISS & GALETTE</h2>
+            <p className=' text-green-700'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias molestias id exercitationem? Officiis, error dolores libero accusantium voluptates laboriosam dignissimos, blanditiis quae tempore sapiente magni! Molestias rerum exercitationem repellat obcaecati?
             </p>
+            <h6 className='text-green-800 text-xl'>10€ pour un plat Hmiss & une galette </h6>
         </div>
+             </div>
+        </div>
+    </section>
 
-    </div>
-
-         </section>
   )
 }
+
+
 
 export default TraditionNouveaute
