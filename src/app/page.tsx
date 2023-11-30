@@ -44,7 +44,7 @@ export default function Home() {
         <SectionSale />
         <SectionSucre />
         <NosRepats />
-       
+        <TraditionNouveaute />
      
     </main>
   );
