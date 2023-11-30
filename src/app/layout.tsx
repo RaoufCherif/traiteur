@@ -2,6 +2,23 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
+
+import { Kalam } from 'next/font/google';
+import { Ephesis } from 'next/font/google';
+import {Smooch} from 'next/font/google';
+
+const kalam = Kalam({ 
+  subsets: ['latin'],
+  weight:["400"],
+  variable: '--font-kalam',
+});
+
+const smooch = Smooch({
+  subsets: ['latin'],
+  weight:["400"],
+  variable: '--font-smooch',
+})
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
