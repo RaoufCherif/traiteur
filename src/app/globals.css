@@ -34,6 +34,11 @@ body {
    height: 1vh;
 
   }
+  #image_rice{
+    max-width: fit-content;
+    max-height: fit-content;
+   }
+
  
 }
 
@@ -50,6 +55,13 @@ body {
 
    #titre_traiteur{
     margin-top: 18vh;
-
    }
+
+   #image_rice{
+    max-width: fit-content;
+    max-height: fit-content;
+   }
+
+
+
 }

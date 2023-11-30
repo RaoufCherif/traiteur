@@ -6,6 +6,8 @@ import Reseau from "./components/Reseau";
 import Link from "next/link";
 import SectionSale from "./components/SectionSale";
 import SectionSucre from "./components/SectionSucre";
+import NosRepats from "./components/NosRepats";
+import TraditionNouveaute from "./components/TraditionNouveaute";
 
 export default function Home() {
 
@@ -41,6 +43,8 @@ export default function Home() {
 
         <SectionSale />
         <SectionSucre />
+        <NosRepats />
+       
      
     </main>
   );
