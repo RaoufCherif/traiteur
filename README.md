@@ -36,8 +36,12 @@ La réalisation pourrait nécessiter deux mois.
 
 ## Getting Started
 
+<<<<<<< HEAD
 `cp .env.example .env` and fill it
 
 Make sure you have node >= 18.2
 Run `yarn` or `npx install`
 `yarn next dev`
+=======
+yarn next dev
+>>>>>>> refs/remotes/origin/main
