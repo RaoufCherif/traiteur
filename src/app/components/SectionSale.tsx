@@ -12,7 +12,8 @@ function SectionSale() {
 
 let data = fetchData();
 
-  return (    <section className=" bg-rose-300 ">
+  return (   
+     <section className=" bg-rose-300 ">
 
     <div className="flex flex-col  items-center">
 
@@ -39,7 +40,7 @@ let data = fetchData();
 <>
          <div className=" flex flex-col items-center gap-4">
          <h4 className="  font-serif hover:font-sans  text-white text-lg" key={index}>{item.name}</h4>
-         <Image  src={"/"+ item.image} width="170"  height="150" alt="burger" />
+         <Image  src={"/"+ item.image} width="170" height="150" alt="burger" />
        </div>
        </>
          )

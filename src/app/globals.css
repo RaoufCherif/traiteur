@@ -31,16 +31,25 @@ body {
 
 @media (min-height: 100px) {
   nav {
-   height: 190px;
+   height: 1vh;
+
   }
+ 
+}
 
 
-} 
 
 @media (min-height: 850px) {
   nav {
-    height: 460px;
+    height: 1vh;
    }
- 
- 
+
+   #gagner_repas{
+    margin-top: 24vh;
+   }
+
+   #titre_traiteur{
+    margin-top: 18vh;
+
+   }
 }

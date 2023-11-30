@@ -36,4 +36,8 @@ La réalisation pourrait nécessiter deux mois.
 
 ## Getting Started
 
-yarn next dev
+`cp .env.example .env` and fill it
+
+Make sure you have node >= 18.2
+Run `yarn` or `npx install`
+`yarn next dev`
