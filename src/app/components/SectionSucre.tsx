@@ -23,7 +23,7 @@ function SectionSucre() {
       <Image src={mini_sucre} width="1977" height="459" alt="background image" />
       <h2 className="mt-20  font-serif hover:font-sans  text-rose-400 text-4xl ">
         {" "}
-        Cinq types de salés
+        Cinq types de sucrés
       </h2>
       <h6 className="mb-20  font-serif hover:font-sans  text-rose-500  ">
         {" "}

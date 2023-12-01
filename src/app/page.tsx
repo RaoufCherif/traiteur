@@ -9,6 +9,7 @@ import SectionSucre from "./components/SectionSucre";
 import NosRepats from "./components/NosRepats";
 import TraditionNouveaute from "./components/TraditionNouveaute";
 import NosSpecialite from "./components/NosSpecialite";
+import AvisClients from "./components/AvisClients";
 
 export default function Home() {
 
@@ -47,6 +48,7 @@ export default function Home() {
         <NosRepats />
         <TraditionNouveaute />
         <NosSpecialite />
+        <AvisClients />
      
     </main>
   );
