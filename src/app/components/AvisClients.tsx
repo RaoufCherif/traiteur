@@ -31,17 +31,17 @@ function AvisClients() {
               <li key={i}>{ratingNu}</li>
               ))}
           </ul>
-            <h4 className="  font-serif hover:font-sans  text-black text-lg" key={index}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</h4>
-            <p className="  font-sans  text-black text-sm w-fit">{item.avis}</p>
+            <h4 className="font-serif hover:font-sans  text-black text-lg" key={index}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</h4>
+            <p className="font-sans  text-black text-sm w-fit p-2">{item.avis}</p>
           </div>
             )
         })}
          </section>
          <section className='flex flex-raw  w-full'>
-            <div className='flex flex-col bg-gradient-to-r from-purple-600 to-orange-600 w-1/2 justify-center items-center justify-around'>
+            <div className='flex flex-col bg-gradient-to-r from-purple-600 to-orange-600  w-1/2 justify-center items-center justify-around'>
                 <h3 className='text-white'> Notre objectif est de vous satisfaire</h3>
                 <h6 className='text-white'> Chaque avis compte!</h6>
-                <button className='bg-black p-4 text-xl text-white' > Rédiger un commentaire </button> 
+                <button className='bg-black p-4 hover:bg-gradient-to-r from-blak-500 to-blue-500 text-xl text-white' > Rédiger un commentaire </button> 
             </div>
             <div className='w-1/2'>
                 <Image src={pene}  width={1200} alt="spagiti" />
