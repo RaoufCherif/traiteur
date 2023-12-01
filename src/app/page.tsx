@@ -8,6 +8,7 @@ import SectionSale from "./components/SectionSale";
 import SectionSucre from "./components/SectionSucre";
 import NosRepats from "./components/NosRepats";
 import TraditionNouveaute from "./components/TraditionNouveaute";
+import NosSpecialite from "./components/NosSpecialite";
 
 export default function Home() {
 
@@ -45,6 +46,7 @@ export default function Home() {
         <SectionSucre />
         <NosRepats />
         <TraditionNouveaute />
+        <NosSpecialite />
      
     </main>
   );

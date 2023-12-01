@@ -16,14 +16,23 @@ Traiteur
 
 ## Méthode de travail
 
-    Agil / sprints
+    Agile / sprints
 
 ## Techno
 
-    Nextjs
-    React
-    Tailwind
-    Prisma
+General/DevOps
+
+- setting up a full project from scratch
+
+Frontend:
+
+- React
+- TailwindJS (customizing style, custom fonts)
+- NextJS
+
+Backend
+
+- Prisma
 
 ## Exclure
 
