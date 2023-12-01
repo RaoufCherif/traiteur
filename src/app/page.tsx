@@ -11,6 +11,7 @@ import TraditionNouveaute from "./components/TraditionNouveaute";
 import NosSpecialite from "./components/NosSpecialite";
 import AvisClients from "./components/AvisClients";
 
+
 export default function Home() {
 
   return (
