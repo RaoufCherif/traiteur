@@ -24,6 +24,11 @@ General/DevOps
 
 - setting up a full project from scratch
 
+- intall fontawesome 
+
+    Bash / Terminal :  
+        `npm i --save @fortawesome/fontawesome-svg-core`
+
 Frontend:
 
 - React

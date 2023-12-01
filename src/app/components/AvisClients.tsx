@@ -6,11 +6,11 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import {
-    IconLookup,
-    IconDefinition,
-    findIconDefinition
-  } from '@fortawesome/fontawesome-svg-core'
+// import {
+//     IconLookup,
+//     IconDefinition,
+//     findIconDefinition
+//   } from '@fortawesome/fontawesome-svg-core'
   
 
 function AvisClients() {
@@ -27,14 +27,14 @@ function AvisClients() {
 
     
         <section  className='flex flex-raw gap-6'> 
-
+     
         {avis.map((item,index)=>{
             return (
            //  <li key={index}>{item}</li>
           
             <div key={index} className=" flex flex-col items-center justify-center gap-2  max-w-[25%]">
             <Image  src={"/"+ item.image} width={120} height="150" alt="burger" />
-            <h6>{item.rating}  <FontAwesomeIcon  icon={fas.faStar } className=' w-3 text-yellow-400 '/></h6> 
+            <h6> {item.rating}  <FontAwesomeIcon  icon={fas.faStar } className=' w-3 text-yellow-400 '/></h6> 
             <h4 className="  font-serif hover:font-sans  text-black text-lg" key={index}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</h4>
             <p className="  font-sans  text-black text-sm w-fit">{item.avis}</p>
           
