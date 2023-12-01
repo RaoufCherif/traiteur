@@ -32,10 +32,7 @@ body {
 @media (min-height: 100px) {
   nav {
    height: 1vh;
-
-  }
-
- 
+  } 
 }
 
 
@@ -44,16 +41,10 @@ body {
   nav {
     height: 1vh;
    }
-
    #gagner_repas{
     margin-top: 24vh;
    }
-
    #titre_traiteur{
     margin-top: 18vh;
    }
-
-
-
-
 }
