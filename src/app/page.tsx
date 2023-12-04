@@ -12,6 +12,8 @@ import NosSpecialite from "./components/NosSpecialite";
 import AvisClients from "./components/AvisClients";
 
 
+
+
 export default function Home() {
 
   return (
@@ -23,21 +25,23 @@ export default function Home() {
 
             <div id="accueil_section_1" className=" flex flex-col  justify-around  items-center  ">
               <div id="titre_traiteur" className="flex  flex-col items-center ">
-              <h1 className="relative font-serif text-purple-500 hover:font-sans text-4xl hover:scale-110 mt-56  ">Traiteur Parisien </h1>
-              <h6 className="relative font-serif text-white" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi officiis vitae quod omnis earum.</h6>
+              <h1 className="relative font-serif text-purple-500 hover:font-sans text-7xl hover:scale-110 mt-80  ">Traiteur Parisien </h1>
+              <h6 className="relative font-serif text-purple-300" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi officiis vitae quod omnis earum.</h6>
             
           </div>
           <div className="flex flex-col items-center">
 
 
         <Link href="/dashboard">
-          <h1 id="gagner_repas" className="relative font-serif text-purple-700  hover:font-sans   text-4xl hover:scale-110 mb-4 mt-28 ">
+          <h1 id="gagner_repas" className="relative font-serif text-purple-700  hover:font-sans   text-7xl hover:scale-110 mb-4 mt-28 ">
             Gagner un repas!
           </h1>
         </Link>
+        <Reseau />
 
-    
-          <Reseau />
+
+
+         
    
 
         </div>
@@ -45,6 +49,7 @@ export default function Home() {
       </div>
 
         <SectionSale />
+       
         <SectionSucre />
         <NosRepats />
         <TraditionNouveaute />

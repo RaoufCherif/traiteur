@@ -6,13 +6,6 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-// import {
-//     IconLookup,
-//     IconDefinition,
-//     findIconDefinition
-//   } from '@fortawesome/fontawesome-svg-core'
-  
-
 function AvisClients() {
     const avis = avisClients();
   return (

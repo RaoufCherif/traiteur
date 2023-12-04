@@ -7,6 +7,7 @@ import { Kalam } from 'next/font/google';
 import { Ephesis } from 'next/font/google';
 import {Smooch} from 'next/font/google';
 
+
 const kalam = Kalam({ 
   subsets: ['latin'],
   weight:["400"],
