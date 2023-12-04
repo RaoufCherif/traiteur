@@ -31,9 +31,9 @@ export default function Home() {
 
 
         <Link href="/dashboard">
-          <h1 id="gagner_repas" className="relative font-serif text-purple-700  hover:font-sans   text-7xl hover:scale-110 mb-4 mt-28 ">
-            Gagner un repas!
-          </h1>
+          <h4 id="gagner_repas" className="relative font-serif text-purple-700  hover:font-sans   text-xl hover:scale-110 mb-2 mt-28 ">
+            Suivez-nous pour gagner un repas!
+          </h4>
         </Link>
         <Reseau />
 

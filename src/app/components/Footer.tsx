@@ -2,12 +2,24 @@ import Link from 'next/link'
 import React from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core'
-
+import { redirect }  from 'next/navigation'
+;
 import { faFacebook, faInstagram, faLinkedin, faSquareFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
+import { Input } from 'postcss';
 
+
+ function getEmail(data : FormData){
+  
+        const email = data.get('email')?.valueOf();
+
+        return email
+        
+}
 
 
 const Footer = () => {
+
+     
   return (
     <>
     <section className='bg-zinc-300  '>
@@ -52,11 +64,25 @@ const Footer = () => {
     <section className='bg-zinc-300  pt-4 items-center'>
 
           <div className='flex flex-raw justify-around'>
+          
+      <form  > 
+
             <div  className='flex flex-raw ml-4 items-center'>
             <p className='mr-2'>Recevez notre newsletter</p>
             <input className='pl-2 h-8 ' type="email" name="email" id="email"  placeholder='Votre mail'/>
-            <Link href={"/"}><p className='bg-black text-white p-1 '>OK</p></Link>
+            <button className='bg-black text-white p-1 '  > Ok </button>
+
+            <Link href={{
+              pathname : "thanks",
+              query: {
+     
+             
+                }
+              }}
+            >Thanks</Link>
             </div>
+
+            </form>
             <div className='flex flex-raw gap-4 items-center'>
 
             <p className=''>Suivez-nous</p>
