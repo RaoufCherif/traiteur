@@ -30,6 +30,10 @@ General/DevOps
         `npm i --save @fortawesome/fontawesome-svg-core`
         `npm i --save @fortawesome/free-brands-svg-icons`
 
+
+- Animation install lottiefiles
+    `npm install @lottiefiles/react-lottie-player`
+
 Frontend:
 
 - React

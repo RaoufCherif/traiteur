@@ -1,5 +1,6 @@
+'use client'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { redirect }  from 'next/navigation'
@@ -8,17 +9,20 @@ import { faFacebook, faInstagram, faLinkedin, faSquareFacebook, faYoutube } from
 import { Input } from 'postcss';
 
 
- function getEmail(data : FormData){
-  
-        const email = data.get('email')?.valueOf();
-
-        return email
-        
-}
+ 
 
 
 const Footer = () => {
 
+  const [value , setValue] = useState("");
+
+  const getEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+}
+
+const handleSubmit = (event : React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault();
+}
      
   return (
     <>
@@ -69,17 +73,16 @@ const Footer = () => {
 
             <div  className='flex flex-raw ml-4 items-center'>
             <p className='mr-2'>Recevez notre newsletter</p>
-            <input className='pl-2 h-8 ' type="email" name="email" id="email"  placeholder='Votre mail'/>
-            <button className='bg-black text-white p-1 '  > Ok </button>
+            <input className='pl-2 h-8 ' type="email" name="email" id="email"  placeholder='Votre mail' value={value} onChange={getEmail}/>
+        
 
-            <Link href={{
+            <Link
+            className='bg-black text-white p-1 ' 
+            href={{
               pathname : "thanks",
-              query: {
-     
-             
-                }
+              query: {value}
               }}
-            >Thanks</Link>
+            >  Ok </Link>
             </div>
 
             </form>
