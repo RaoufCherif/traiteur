@@ -10,9 +10,9 @@ function AvisClients() {
     const avis = avisClients();
   return (
 
-    <section className='flex flex-col items-center  gap-8 p-8 bg-green-100'>
+    <section className='flex flex-col items-center  gap-8 p-0 bg-green-100 '>
         <h2 className='text-2xl my-8'> Ce que disent nos clients</h2>
-        <section  className='flex flex-raw gap-6'> 
+        <section  className='flex flex-raw gap-6 p-4 '> 
         {avis.map((item,index)=>{
              let rating = item.rating;
              let ratingNu  = <FontAwesomeIcon  icon={fas.faStar } className=' w-3 text-yellow-400 '/>
@@ -30,7 +30,7 @@ function AvisClients() {
             )
         })}
          </section>
-         <section className='flex flex-raw  w-full'>
+         <section className='flex flex-raw  w-full '>
             <div className='flex flex-col bg-gradient-to-r from-purple-600 to-orange-600  w-1/2 justify-center items-center justify-around'>
                 <h3 className='text-white'> Notre objectif est de vous satisfaire</h3>
                 <h6 className='text-white'> Chaque avis compte!</h6>

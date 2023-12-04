@@ -10,9 +10,7 @@ import NosRepats from "./components/NosRepats";
 import TraditionNouveaute from "./components/TraditionNouveaute";
 import NosSpecialite from "./components/NosSpecialite";
 import AvisClients from "./components/AvisClients";
-
-
-
+import Footer from "./components/Footer";
 
 export default function Home() {
 
@@ -55,7 +53,8 @@ export default function Home() {
         <TraditionNouveaute />
         <NosSpecialite />
         <AvisClients />
-     
+        <Footer />     
+        
     </main>
   );
 }
