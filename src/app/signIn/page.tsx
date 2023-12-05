@@ -5,6 +5,7 @@ import rice from "../../../public/rice.jpg"
 import Link from 'next/link'
 import Inscription from '../inscription/page'
 import signInImage from "../../../public/signIn_image.jpeg"
+import GoogleSignIn from '../components/GoogleSignIn'
 
 function SignIn() {
   return (
@@ -82,6 +83,8 @@ function SignIn() {
       <Link href={ { pathname : "inscription" } }className="font-semibold leading-6 text-indigo-100 hover:text-orange-500 text-blue-900" >  Inscrivez-vous</Link>
     </p>
   </div>
+
+
 </div>
 </section>
 

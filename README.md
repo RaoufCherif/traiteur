@@ -24,6 +24,9 @@ General/DevOps
 
 - setting up a full project from scratch
 
+- Install nextauth 
+        `npm install next-auth@beta`
+
 - intall fontawesome 
 
     Bash / Terminal :  
