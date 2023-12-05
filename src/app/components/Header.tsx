@@ -18,7 +18,7 @@ const handleclick = () => {
 } 
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col  ">
     <div className=" absolute left-0 ml-8 mt-8     ">
     <img
       className="h-8 w-auto "

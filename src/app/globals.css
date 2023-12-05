@@ -48,3 +48,16 @@ body {
     margin-top: 11vh;
    }
 }
+
+@media (min-height: 500px) {
+  nav {
+    height: 1vh;
+   }
+   #gagner_repas{
+    margin-top: 16vh;
+   }
+   #titre_traiteur{
+    margin-top: 13vh;
+   }
+}
+
