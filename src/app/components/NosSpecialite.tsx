@@ -19,12 +19,12 @@ function NosSpecialite() {
                                 <button className='text-white m-4'>Découvrir</button>
                             </div>
                             <div className='flex flex-col  bg-black justify-between items-center  p-4 w-52 h-72 '>
-                                <h3 className='text-white m-2'>Plat Tradicionnel</h3>
+                                <h3 className='text-white m-2'>Buffet de fête</h3>
                                 <Image src={snak}  alt='chef'  className='rounded-xl'  />
                                 <button className='text-white m-4'>Découvrir</button>
                             </div>
                             <div className='flex flex-col  bg-black justify-between items-center p-4  w-52 h-72 '>
-                                <h3 className='text-white'>Plat Tradicionnel</h3>
+                                <h3 className='text-white'>Gateau d'ânniversaire</h3>
                                 <Image src={sucre}     alt='chef'  className='rounded-xl '   />
                                 <button className='text-white m-4'>Découvrir</button>
                             </div>
