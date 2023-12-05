@@ -1,7 +1,21 @@
+"use client"
 import React from "react";
+import { useRouter } from "next/navigation";
 import Button from "./Reseau";
+import { redirect } from "next/navigation";
+
+
+
+
+
 
 const Header = () => {
+  const router = useRouter();
+const handleclick = () => {
+  console.log("*************************")
+  router.push( "signIn");
+} 
+
   return (
     <div className="flex flex-col ">
     <div className=" absolute left-0 ml-8 mt-8     ">
@@ -107,6 +121,7 @@ const Header = () => {
             <button
               type="button"
               className="relative rounded-full bg-gray-800 p-3 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              onClick={ () => handleclick()}  
             >
               LogIn
             </button>
