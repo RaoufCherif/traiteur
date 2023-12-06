@@ -2,9 +2,10 @@
 import React from 'react'
 import { signIn, signOut, useSession} from 'next-auth/react';
 
-const GoogleSignIn = () => {
+const SignIn = () => {
+    const nom = "brahimi"
 const {data: session}  = useSession();
-    if(session && session.user){
+    if(session?.user?.name === nom){
         return(
             <div className='flex gap-4 ml-auto'>
                 <p>{session.user.name}</p>
@@ -28,4 +29,4 @@ const {data: session}  = useSession();
   )
 }
 
-export default GoogleSignIn
+export default SignIn

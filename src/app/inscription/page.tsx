@@ -52,9 +52,6 @@ function Inscription() {
       </div>
     </div>
     </section>
-
-
-
 <Image
  id='image_rice' 
  src={inscriptionImage} 

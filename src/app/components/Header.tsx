@@ -3,7 +3,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import Button from "./Reseau";
 import { redirect } from "next/navigation";
-import GoogleSignIn from "./GoogleSignIn";
+import SignIn from "./SignIn";
 
 
 
@@ -127,7 +127,7 @@ const handleclick = () => {
               LogIn
             </button> */}
 
-            <GoogleSignIn />
+            <SignIn />
           </div>
         </div>
       </div>

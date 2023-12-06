@@ -1,4 +1,5 @@
 "use client"
+import clsx from "clsx"
 import React from 'react'
 import Image from 'next/image'
 import rice from "../../../public/rice.jpg"
@@ -41,10 +42,12 @@ function SignIn() {
 
 //    </div>
 
-<div className='bg-slate-100'>
-<div className='flex flex-raw h-screen p-48 justify-center  '>
+<div className={clsx(
+  'flex flex-raw h-screen justify-center ', 
+  'bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800',
+  )}>
 
- <section  id='signIn' className='flex flex-col  gap-4 p-8 justify-center items-center  bg-gradient-to-r  from-orange-200 to-yellow-600 w-1/2 '>
+ <section  id='signIn' className='flex flex-col h-full  gap-4 p-8 justify-center items-center   w-1/2 '>
 
 <div className="flex min-h-full flex-col justify-center lg:px-8">
   <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -93,7 +96,7 @@ function SignIn() {
  id='image_rice' 
  src={signInImage} 
   alt="background image"  
- className=' w-1/2 '/>
+ className='w-1/2 h-screen'/>
 
 
 
@@ -102,7 +105,7 @@ function SignIn() {
 </div>
 
 
-</div>
+
   )
 }
 
