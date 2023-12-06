@@ -11,6 +11,8 @@ import TraditionNouveaute from "./components/TraditionNouveaute";
 import NosSpecialite from "./components/NosSpecialite";
 import AvisClients from "./components/AvisClients";
 import Footer from "./components/Footer";
+import LogInButton from "../app/components/LogInButton"
+
 
 export default function Home() {
 
@@ -24,9 +26,9 @@ export default function Home() {
             <div id="accueil_section_1" className=" flex flex-col  justify-around  items-center  ">
               <div id="titre_traiteur" className="flex  flex-col items-center ">
 
-              <h1 className="relative font-serif text-purple-500 hover:font-sans font-bold text-6xl hover:scale-110 mt-44  ">Traiteur Parisien </h1>
-              <h6 className="relative font-serif  text-purple-200 text-xl" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi officiis vitae quod omnis earum.</h6>
-
+              <h1 className="relative font-serif text-purple-500 hover:font-sans font-bold text-3xl md:text-6xl hover:scale-110 mt-44  ">Traiteur Parisien </h1>
+              <h2 className="relative font-serif font-semibold  text-purple-200 text-sm md:text-xl italic " >Lorem ipsum dolor sit amet</h2>
+           
             
           </div>
           <div className="flex flex-col items-center">
@@ -41,9 +43,8 @@ export default function Home() {
         </Link>
         <Reseau />
 
+<LogInButton />
 
-
-         
    
 
         </div>
