@@ -3,10 +3,11 @@ import Link from "next/link";
 import clsx from "clsx";
 import React from "react";
 import { prisma } from "@/db";
+import bcrypt from "bcrypt";
 
-async function createUser(e :any ,  data: FormData) {
-  e.preventDefault();
+async function createUser(data: FormData) {
   "use server";
+
   const nom = data.get("nom")?.valueOf();
   const prenom = data.get("prenom")?.valueOf();
   const email = data.get("email")?.valueOf();
@@ -15,19 +16,23 @@ async function createUser(e :any ,  data: FormData) {
   if (typeof nom !== "string" || nom.length === 0) {
     throw new Error("Format incorrect!");
   }
-  console.log("**********************************");
 
-  // const user = await prisma.user.findUnique({
-  //   where: {
-  //     id: 1
-  //   },
+  const saltRounds = 10;
 
-  // });
+  const hashPassword = async (mdp: any) => {
+    try {
+      const hash = await bcrypt.hash(mdp, saltRounds);
+      return hash;
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  const hp = await hashPassword(password);
 
   await prisma.user.create({
-    data: { nom: nom, prenom: prenom, email: email, password: password },
+    data: { nom: nom, prenom: prenom, email: email, password: hp },
   });
-  console.log("===============================");
 }
 
 async function SignUpForm() {
@@ -38,16 +43,28 @@ async function SignUpForm() {
         type="text"
         name="nom"
         id="nom"
-        className="border-inherit border-b-amber-900"
+        placeholder="Entrer votre nom"
+        className={clsx(
+          "border-transparent border-b-amber-900 bg-transparent text-white",
+          " hover:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-yellow-200 via-yellow-400 to-yellow-700",
+          " hover:border-transparent  ",
+          "placeholder:text-gray-500",
+        )}
         required
       />
 
-      <label>Prenom :</label>
+      <label>Prénom :</label>
       <input
         type="text"
         name="prenom"
         id="prenom"
-        className="border-inherit border-b-amber-900"
+        placeholder="Entrer votre prénom"
+        className={clsx(
+          "placeholder:text-gray-500",
+          "border-transparent border-b-amber-900 bg-transparent text-white",
+          " hover:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-yellow-200 via-yellow-400 to-yellow-700",
+          " hover:border-transparent  ",
+        )}
         required
       />
       <label>Email :</label>
@@ -55,7 +72,13 @@ async function SignUpForm() {
         type="email"
         name="email"
         id="email"
-        className="border-inherit border-b-amber-900"
+        placeholder="Entrer votre email"
+        className={clsx(
+          "border-transparent border-b-amber-900 bg-transparent text-white",
+          " hover:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-yellow-200 via-yellow-400 to-yellow-700",
+          " hover:border-transparent  ",
+          "placeholder:text-gray-500",
+        )}
         required
       />
       <label>Mot de passe :</label>
@@ -63,7 +86,13 @@ async function SignUpForm() {
         type="password"
         name="password"
         id="password"
-        className="border-inherit border-b-amber-900"
+        placeholder="Entrer votre mot de passe"
+        className={clsx(
+          "border-transparent border-b-amber-900 bg-transparent text-white",
+          " hover:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-yellow-200 via-yellow-400 to-yellow-700",
+          " hover:border-transparent  ",
+          "placeholder:text-gray-500",
+        )}
         required
       />
       <div className="flex flex-raw gap-2 justify-center justify-between">
@@ -74,7 +103,7 @@ async function SignUpForm() {
         <Button
           type="submit"
           variant="outlined"
-          className="mt-4"
+          className="mt-4 "
           color="warning"
         >
           <Link href="/">Annuler</Link>
