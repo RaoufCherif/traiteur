@@ -7,18 +7,19 @@ import Link from "next/link"
 
 
 const LogInButton = () => {
-  return (
 
+  return (
     <Button
-    variant='outlined'
+    variant='text'
     color='primary'
-    className='mt-16'
+    className='mt-0'
      >
       
       <Link href={"users"}> 
       Log In 
       </Link>
       </Button>
+
   )
 }
 

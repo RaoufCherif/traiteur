@@ -3,7 +3,8 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import Button from "./Reseau";
 import { redirect } from "next/navigation";
-import SignIn from "./SignIn";
+
+import LogInButton from "./LogInButton";
 
 
 
@@ -127,7 +128,7 @@ const handleclick = () => {
               LogIn
             </button> */}
 
-            <SignIn />
+            <LogInButton />
           </div>
         </div>
       </div>

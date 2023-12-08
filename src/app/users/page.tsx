@@ -1,25 +1,23 @@
-import React from 'react';
-import { getUsers } from '../../../util/getUsers';
+import React from "react";
+import { getUsers } from "../../../util/getUsers";
 
+export async function Users() {
+  const users = await getUsers();
+  const usersLength = users.length;
 
-export async function Users ()  {
-
-const users = await getUsers();
-const usersLength = users.length
-
-console.log(usersLength + " je suis la longueur")
+  console.log(usersLength + " je suis la longueur");
 
   return (
-  <ul>
-    {users.map((user) => (
-       <li key={user.id}> {user.id} 
-         { user.nom} </li>
-    )
-  
-    )}
- 
-  </ul>
-  )
+    <ul>
+      {users.map((user) => (
+        <li key={user.id}>
+          {" "}
+          {user.id}
+          {user.nom}{" "}
+        </li>
+      ))}
+    </ul>
+  );
 }
 
-export default Users
+export default Users;
