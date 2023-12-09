@@ -3,50 +3,42 @@ import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
 import Providers from "next-auth/providers";
 import { PrismaClient } from "@prisma/client";
-import CredentialsProvider  from "next-auth/providers/credentials";
-
-
+import CredentialsProvider from "next-auth/providers/credentials";
 
 const prisma = new PrismaClient();
+
 export default NextAuth({
-    providers:[
-      CredentialsProvider({
-        type: 'credentials',
-        credentials: {},
-         authorize(credentials , req){
-          const user = await prisma.user.findUnique({
-            where: {email: credentials.email},
-          });
-          if(user && user.password === credentials.password){
-            return Promise.resolve(user);
-          }else{
-            return Promise.resolve(null)
-          }
-        }
-      })
-    ],
-    pages:{
-      signIn:'/signIn',
-      signOut:'/signOut',
-      error:'auth/error',
-      verifyRequest:'auth/verify-request',
-    },
-    callbacks:{
-      session: async (session: { user: { id: any; }; }, user: { id: any; }) => {
-        session.user.id = user.id;
-        return Promise.resolve(session);
+  providers: [
+    CredentialsProvider({
+      credentials: {
+        email: { type: "text", placeholder: "test@test.com" },
+        password: { type: "text", placeholder: "Pa$$w0rd" },
       },
+      async authorize(credentials: any, req: any) {
+        const user = await prisma.user.findUnique({
+          where: { email: credentials.email },
+        });
+        if (user && user.password === credentials.password) {
+          return Promise.resolve(user);
+        } else {
+          return Promise.resolve(null);
+        }
+      },
+    }),
+  ],
+  pages: {
+    signIn: "/signIn",
+    signOut: "/signOut",
+    error: "auth/error",
+    verifyRequest: "auth/verify-request",
+  },
+  callbacks: {
+    session: async (session: { user: { id: any } }, user: { id: any }) => {
+      session.user.id = user.id;
+      return Promise.resolve(session);
     },
+  },
 });
-
-
-
-
-
-
-
-
-
 // export default async function handler(req: any, res: any) {
 
 //   console.log("*********************************")
@@ -79,7 +71,6 @@ export default NextAuth({
 //         }),
 //         Providers.Credentials({
 //           async authorize(credentials) {
-
 //           }
 
 //         })
@@ -88,6 +79,3 @@ export default NextAuth({
 // });
 
 // export { handler as GET, handler as POST};
-
-
-

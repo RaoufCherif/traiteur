@@ -52,6 +52,7 @@ Frontend:
 Backend
 
 - Prisma
+   `npm install zod` 
 
 ## Exclure
 

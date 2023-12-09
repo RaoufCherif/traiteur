@@ -7,6 +7,7 @@ import mini_piza from "../../../public/mini_pizza.jpg";
 import mini_brics from "../../../public/mini_brics.jpeg";
 import mini_croissants from "../../../public/mini_croissant.jpeg";
 import { fetchData } from "../../../util/getSales";
+import clsx from "clsx";
 
 function SectionSale() {
   let data = fetchData();
@@ -60,7 +61,14 @@ function SectionSale() {
         <h6 className="mb-20  font-serif hover:font-sans text-white ">
           8 pièces de chaque types
         </h6>
-        <button className="rounded  bg-gradient-to-b from-pink-500 to-green-100 p-4 mb-10">
+        <button
+          className={clsx(
+            "rounded p-4 mb-10 ",
+            " bg-gradient-to-r from-orange-700 to-rose-600 ",
+            "text-white",
+            "hover:bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-rose-500 to-indigo-700",
+          )}
+        >
           Commander
         </button>
       </div>
