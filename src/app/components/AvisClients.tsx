@@ -5,6 +5,8 @@ import pene from "../../../public/pene.jpeg";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button } from "@mui/material";
+import clsx from "clsx";
 
 function AvisClients() {
   const avis = avisClients();
@@ -49,13 +51,57 @@ function AvisClients() {
           );
         })}
       </section>
+
+      <h3 className="bg-gradient-to-r from-orange-600 to-orange-500 text-white px-8 py-1 rounded-xl ">
+        Laisser un avis
+      </h3>
+
       <section className="flex flex-raw  w-full ">
-        <div className="flex flex-col bg-gradient-to-r from-purple-600 to-orange-600  w-1/2 justify-center items-center justify-around">
-          <h3 className="text-white"> Notre objectif est de vous satisfaire</h3>
-          <h6 className="text-white"> Chaque avis compte!</h6>
-          <button className="bg-black p-4 hover:bg-gradient-to-r from-blak-500 to-blue-500 hover:rounded-xl hover:text-black text-xl text-white">
-Laisser un avis
-          </button>
+        <div className="flex flex-col bg-gradient-to-r from-orange-700 to-orange-500  w-1/2 justify-center items-center ">
+          <div className=" mt-0 mb-16 flex flex-col items-center justify-center">
+          <h6 className="text-white"> Notre objectif est de vous satisfaire</h6>
+          <p className="text-white text-xs "> Chaque avis compte!</p>
+          </div>
+          <form action={""} className={clsx("flex flex-col gap-4")}>
+            <label className="text-white">Rate :</label>
+            <input
+              type="number"
+              name="rate"
+              id="rate"
+              placeholder=""
+              min={0}
+              max={5}
+              className={clsx(
+                "border-transparent border-b-amber-900 bg-transparent text-white",
+                " hover:border-transparent  ",
+                "placeholder:text-gray-500",
+              )}
+              required
+            />
+
+            <label className="text-white" >Avis :</label>
+            <textarea
+              name="avis"
+              id="avis"
+              placeholder=""
+              className={clsx(
+                "placeholder:text-gray-500",
+                "border-transparent border-b-amber-900 bg-transparent text-white",
+          
+               
+              )}
+              required
+            />
+            
+           
+          
+         
+            <div className="flex flex-raw gap-2 justify-center justify-between">
+              <Button type="submit" variant="contained" className="mt-4">
+                Valider
+              </Button>
+            </div>
+          </form>
         </div>
         <div className="w-1/2">
           <Image src={pene} width={1200} alt="spagiti" />

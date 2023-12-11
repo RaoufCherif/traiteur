@@ -20,6 +20,8 @@ export default async function createUser(
     res: NextApiResponse
 ) {
 
+  console.log("*********************************************")
+
 const { email, password} = createUsersChema.parse(req.body);
 
 const user = await prisma.user.findUnique({where: {email}})
