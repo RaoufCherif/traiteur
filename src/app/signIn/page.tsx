@@ -125,7 +125,7 @@ function SignIn() {
             <p className="mt-10 text-center text-sm text-blue-700">
               vous n'êtes pas inscrits?
               <Link
-                href={{ pathname: "inscription" }}
+                href={{ pathname: "signUp" }}
                 className="font-semibold leading-6 text-indigo-100 hover:text-orange-500 text-blue-900"
               >
                 {" "}

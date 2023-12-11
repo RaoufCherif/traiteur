@@ -27,22 +27,22 @@ const Reseau = () => {
     //  />
     <>
       <Link href="/">
-        <div className="flex flex-raw gap-1">
+        <div className="flex flex-raw gap-2">
           <FontAwesomeIcon
             icon={faSquareFacebook}
-            className=" w-7 text-purple-300 z-50"
+            className="text-purple-300 z-50"
           />
           <FontAwesomeIcon
             icon={faYoutube}
-            className=" w-10 text-purple-300 z-50"
+            className="  text-purple-300 z-50"
           />
           <FontAwesomeIcon
             icon={faInstagram}
-            className=" w-7 text-purple-300 z-50"
+            className="  text-purple-300 z-50"
           />
           <FontAwesomeIcon
             icon={faLinkedin}
-            className=" w-7 text-purple-300 z-50"
+            className="  text-purple-300 z-50"
           />
         </div>
       </Link>

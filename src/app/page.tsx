@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Header from "./components/Header";
-import trois_plats from "public/trois_plats.jpg";
+import falafel from "public/falafels.jpg";
 import Reseau from "./components/Reseau";
 import Link from "next/link";
 import SectionSale from "./components/SectionSale";
@@ -22,7 +22,7 @@ export default function Home() {
           "flex-col justify-start  items-center  ",
         )}
       >
-        <Image src={trois_plats} alt="background image" fill />
+        <Image src={falafel} alt="background image" fill />
 
         <Header />
         <div
@@ -33,7 +33,7 @@ export default function Home() {
             <h1
               className={clsx(
                 "relative font-serif text-purple-500",
-                "hover:font-sans font-bold text-3xl md:text-6xl hover:scale-110 mt-44  ",
+                "hover:font-sans font-bold text-3xl md:text-6xl hover:scale-110 mt-8  ",
               )}
             >
               Traiteur Parisien{" "}
@@ -42,14 +42,14 @@ export default function Home() {
               Lorem ipsum dolor sit amet
             </h2>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mt-[40vh]">
             <Link href="/dashboard">
-              <h1
+              <h6
                 id="gagner_repas"
-                className="relative font-serif text-purple-500  hover:font-sans   text-6xl hover:scale-110 mb-4 mt-28 "
+                className="relative font-serif text-purple-500  hover:font-sans   text-l hover:scale-110 mb-4  "
               >
-                Gagner un repas!
-              </h1>
+                Suivez-nous pour gagner un repas!
+              </h6>
             </Link>
             <Reseau />
           </div>
