@@ -44,7 +44,7 @@ const Header = () => {
                   className="block h-6 w-96"
                   fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth="1.5"
+                  stroke-width="1.5"
                   stroke="currentColor"
                   aria-hidden="true"
                 >
