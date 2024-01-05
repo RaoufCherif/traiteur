@@ -33,16 +33,16 @@ export default function Home() {
             <h1
               className={clsx(
                 "relative font-serif text-purple-500",
-                "hover:font-sans font-bold text-3xl md:text-6xl hover:scale-110 mt-8  ",
+                "hover:font-sans font-bold text-3xl md:text-6xl hover:scale-110   ",
               )}
             >
-              Traiteur Parisien{" "}
+              Five Stars Traiteur
             </h1>
-            <h2 className="relative font-serif font-semibold  text-purple-200 text-sm md:text-xl italic ">
+            <p className="relative font-serif font-semibold  text-purple-200 text-sm  italic ">
               Lorem ipsum dolor sit amet
-            </h2>
+            </p>
           </div>
-          <div className="flex flex-col items-center mt-[40vh]">
+          {/* <div className="flex flex-col items-center mt-[40vh]">
             <Link href="/dashboard">
               <h6
                 id="gagner_repas"
@@ -52,7 +52,7 @@ export default function Home() {
               </h6>
             </Link>
             <Reseau />
-          </div>
+          </div> */}
         </div>
       </div>
 

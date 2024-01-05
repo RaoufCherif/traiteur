@@ -70,3 +70,20 @@ La réalisation pourrait nécessiter deux mois.
 Make sure you have node >= 18.2
 Run `yarn` or `npx install`
 `yarn next dev`
+
+
+## Upgrade node 
+remove oldest node version
+`sudo apt --auto-remove purge npm` 
+`sudo apt --auto-remove purge nodejs`
+fetch the latest node version
+ `curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -`
+installer node 
+`sudo apt-get install nodejs -y`
+
+
+# install npm 
+`sudo apt install npm`
+ 
+# install packages
+`npm install`
