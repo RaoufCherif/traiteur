@@ -90,3 +90,5 @@ installer node
 `npm install`
 
 # Apply pullrequest protection
+  
+  créer des pull-request
