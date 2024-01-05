@@ -24,24 +24,24 @@ General/DevOps
 
 - setting up a full project from scratch
 
-- Install nextauth 
-        `npm install next-auth@beta`
+- Install nextauth
+  `npm install next-auth@beta`
 
-- intall fontawesome 
+- intall fontawesome
 
-    Bash / Terminal :  
-        `npm i --save @fortawesome/fontawesome-svg-core`
-        `npm i --save @fortawesome/free-brands-svg-icons`
+  Bash / Terminal :  
+   `npm i --save @fortawesome/fontawesome-svg-core`
+  `npm i --save @fortawesome/free-brands-svg-icons`
 
 - installer tailwindcss
-        ` npm install @tailwindcss/forms`
+  ` npm install @tailwindcss/forms`
 
 - Animation install lottiefiles
-    `npm install @lottiefiles/react-lottie-player`
+  `npm install @lottiefiles/react-lottie-player`
 
-- Material UI    MUI
-    ` npm install @mui/material @emotion/react @emotion/styled `
-- React-Hook-Form    
+- Material UI MUI
+  `npm install @mui/material @emotion/react @emotion/styled`
+- React-Hook-Form
 
 Frontend:
 
@@ -52,7 +52,7 @@ Frontend:
 Backend
 
 - Prisma
-   `npm install zod` 
+  `npm install zod`
 
 ## Exclure
 
@@ -71,19 +71,22 @@ Make sure you have node >= 18.2
 Run `yarn` or `npx install`
 `yarn next dev`
 
+## Upgrade node
 
-## Upgrade node 
 remove oldest node version
-`sudo apt --auto-remove purge npm` 
+`sudo apt --auto-remove purge npm`
 `sudo apt --auto-remove purge nodejs`
 fetch the latest node version
- `curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -`
-installer node 
+`curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -`
+installer node
 `sudo apt-get install nodejs -y`
 
+# install npm
 
-# install npm 
 `sudo apt install npm`
- 
+
 # install packages
+
 `npm install`
+
+# Apply pullrequest protection
