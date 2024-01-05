@@ -9,7 +9,6 @@ import clsx from "clsx";
 
 import { fetchSucre } from "../../../util/getSucres";
 
-
 function SectionSucre() {
   let data = fetchSucre();
   return (
@@ -39,22 +38,18 @@ function SectionSucre() {
           {data.map((item, index) => {
             return (
               //  <li key={index}>{item}</li>
-              <>
-                <div className=" flex flex-col items-center gap-4">
-                  <h4
-                    className="  font-serif hover:font-sans  text-rose-400 text-lg"
-                    key={index}
-                  >
-                    {item.name}
-                  </h4>
-                  <Image
-                    src={"/" + item.image}
-                    width="170"
-                    height="150"
-                    alt="burger"
-                  />
-                </div>
-              </>
+
+              <div key={index} className=" flex flex-col items-center gap-4">
+                <h4 className="font-serif hover:font-sans  text-rose-400 text-lg">
+                  {item.name}
+                </h4>
+                <Image
+                  src={"/" + item.image}
+                  width="170"
+                  height="150"
+                  alt="burger"
+                />
+              </div>
             );
           })}
         </div>
@@ -68,12 +63,10 @@ function SectionSucre() {
         </h6>
         <button
           className={clsx(
-
             "rounded  p-4 mb-10",
             "bg-gradient-to-r from-green-200 via-green-400 to-green-500 ",
             "hover:bg-gradient-to-l from-green-500 to-green-700",
             "text-white",
-            
           )}
         >
           Commander

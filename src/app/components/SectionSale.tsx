@@ -34,22 +34,18 @@ function SectionSale() {
           {data.map((item, index) => {
             return (
               //  <li key={index}>{item}</li>
-              <>
-                <div className=" flex flex-col items-center gap-4">
-                  <h4
-                    className="  font-serif hover:font-sans  text-white text-lg"
-                    key={index}
-                  >
-                    {item.name}
-                  </h4>
-                  <Image
-                    src={"/" + item.image}
-                    width="170"
-                    height="150"
-                    alt="burger"
-                  />
-                </div>
-              </>
+
+              <div key={index} className=" flex flex-col items-center gap-4">
+                <h4 className="  font-serif hover:font-sans  text-white text-lg">
+                  {item.name}
+                </h4>
+                <Image
+                  src={"/" + item.image}
+                  width="170"
+                  height="150"
+                  alt="burger"
+                />
+              </div>
             );
           })}
         </div>
