@@ -19,7 +19,7 @@ function TraditionNouveaute() {
             <p className='z-50 text-green-700'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias molestias id exercitationem? Officiis, error dolores libero accusantium voluptates laboriosam dignissimos, blanditiis quae tempore sapiente magni! Molestias rerum exercitationem repellat obcaecati?
             </p>
             <br />
-            <h6 className='text-green-800 text-xl'>10€ pour un plat Hmiss & une galette </h6>
+            <h6 className='text-green-800 text-xl'>10€ pour une portion de Hmiss & une galette </h6>
         </div>
              </div>
         </div>
