@@ -1,5 +1,5 @@
-
-import React, { FormEvent } from "react";
+"use client"
+import React, { FormEvent, useState } from "react";
 import Image from "next/image";
 import inscriptionImage from "../../../public/inscription_image.jpeg";
 import clsx from "clsx";
@@ -7,54 +7,40 @@ import { signIn } from "next-auth/react";
 import email from "next-auth/providers/email";
 import { Button } from "@mui/material";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 
-
-async function handleSubmit(e: FormEvent) {
-  "use server"
-  e.preventDefault();
-
-  const form = new FormData(e.target as HTMLFormElement);
-
-  console.log(form.get("nom"))
-
-
-  console.log(form.get("******************************"))
-
-
-  const res = await fetch("/api/createUser", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-
-    body: JSON.stringify({
-      nom: form.get("nom"),
-      prenom: form.get("prenom"),
-      password: form.get("password"),
-      email: form.get("email"),
-    }),
-  });
-
-  const data = await res.json();
-
-  if (!data.user) return null;
-
-  signIn("credentials", {
-    email: data.user.email,
-    password: form.get("password"),
-    callbackUrl: "/",
-  });
-
-
-
-
-
-
-}
  
 export function Inscription() {
+  const router = useRouter();
+  const [data, setData] = useState({
+    nom: "",
+    prenom: "",
+    email: "",
+    password:"",
+  })
+  const baseUrl = "http://localhost:3000/";
 
+  const registerUser =async (e : {preventDefault: () => void} ) => {
+    e.preventDefault();
+    const response = await fetch(baseUrl + "api/auth/createUser", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ data })
+    });  
+
+    // const userInfo = response.json();
+
+    setData({
+      nom: "",
+      prenom: "",
+      email: "",
+      password:"",
+    })
+    router.push('/signIn');
+  }
 
   return (
     <div className="bg-slate-100">
@@ -65,10 +51,11 @@ export function Inscription() {
         >
           <div className="flex min-h-full flex-col justify-center  pb-8 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-              <img
+              <Image
                 className="mx-auto h-10 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src=""
                 alt="Your Company"
+                width={5}
               />
               <h2 className="my-2 text-center text-2xl font-bold leading-9 tracking-tight text-blue-700 ">
                 Inscrivez-vous
@@ -77,7 +64,7 @@ export function Inscription() {
 
             <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
               <form
-                onSubmit={handleSubmit}
+                onSubmit={registerUser}
                 className={clsx("flex flex-col gap-3")}
               >
                 <label>Nom :</label>
@@ -85,6 +72,8 @@ export function Inscription() {
                   type="text"
                   name="nom"
                   id="nom"
+                  value={data.nom}
+                  onChange={(e) => {setData({ ...data, nom: e.target.value})}}
                   placeholder="Entrer votre nom"
                   className={clsx(
                     "border-transparent border-b-amber-900 bg-transparent text-white",
@@ -100,6 +89,8 @@ export function Inscription() {
                   type="text"
                   name="prenom"
                   id="prenom"
+                  value={data.prenom}
+                  onChange={(e) => {setData({ ...data, prenom: e.target.value})}}
                   placeholder="Entrer votre prénom"
                   className={clsx(
                     "placeholder:text-gray-500",
@@ -114,6 +105,8 @@ export function Inscription() {
                   type="email"
                   name="email"
                   id="email"
+                  value={data.email}
+                  onChange={(e) => {setData({ ...data, email: e.target.value})}}
                   placeholder="Entrer votre email"
                   className={clsx(
                     "border-transparent border-b-amber-900 bg-transparent text-white",
@@ -128,6 +121,8 @@ export function Inscription() {
                   type="password"
                   name="password"
                   id="password"
+                  value={data.password}
+                  onChange={(e) => {setData({...data, password: e.target.value})}}
                   placeholder="Entrer votre mot de passe"
                   className={clsx(
                     "border-transparent border-b-amber-900 bg-transparent text-white",
@@ -139,7 +134,7 @@ export function Inscription() {
                 />
                 <div className="flex flex-raw gap-2 justify-center justify-between">
                   <Button type="submit" variant="outlined" className="mt-4">
-                    Inscrire
+                    S&apos;inscrire
                   </Button>
 
                   <Button

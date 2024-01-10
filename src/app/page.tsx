@@ -14,6 +14,7 @@ import LogInButton from "../app/components/LogInButton";
 import clsx from "clsx";
 
 export default function Home() {
+
   return (
     <main>
       <div
@@ -55,6 +56,12 @@ export default function Home() {
           </div> */}
         </div>
       </div>
+
+
+
+
+
+
 
       <SectionSale />
 
