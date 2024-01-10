@@ -92,3 +92,5 @@ installer node
 # Apply pullrequest protection
   
   créer des pull-request
+
+# Rebase & Merge 
