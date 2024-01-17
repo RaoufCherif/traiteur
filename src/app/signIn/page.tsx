@@ -1,49 +1,39 @@
 "use client";
 import clsx from "clsx";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import rice from "../../../public/rice.jpg";
 import Link from "next/link";
 import Inscription from "../inscription/page";
-import signInImage from "../../../public/signIn_image.jpeg";
+import signInImage from "../../../public/image_genere_ia.png";
 import GoogleSignIn from "../components/GoogleSignIn";
+import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
 
-function SignIn() {
-  return (
-    //
+function ConnexionPage() {
+  const router = useRouter();
+  const [data, setData] = useState({
+    email: "",
+    password:"",
+  });
 
-    //
-    //     <label htmlFor="" classNameName='p-1'>Email :
-    //     <input type="email"  required classNameName='p-1 my-1 mx-4'/>
-    //     </label>
+    const handleConnection = async (e : {preventDefault: () => void} ) => {
+          e.preventDefault();
 
-    //     <label htmlFor="">Mot de passe :
-    //     <input type="password" required classNameName='p-1 my-1 mx-4'/>
-    //     </label>
+          signIn('credentials', {
+          
+            ...data,
+            redirect: false,
+          });
 
-    //    </section>
-
-    //    <section  id='inscription' classNameName='flex flex-col w-1/2 gap-4   bg-gradient-to-b from-purple-800 to-purple-500 p-8 rounded-xl'>
-    //     <label htmlFor="" classNameName='p-1 my-1 mx-4'>Email :
-    //     <input type="email" required classNameName='p-1 my-1 mx-4'/>
-    //     </label>
-
-    //     <label htmlFor="">Mot de passe :
-    //     <input type="password" required classNameName='p-1 my-1 mx-4 '/>
-    //     </label>
-
-    //     <label htmlFor="">Confimer mot de passe :
-    //     <input type="password" required classNameName='p-1 my-1 mx-4'/>
-    //     </label>
-
-    //    </section>
-
-    //    </div>
-
+          console.log("µ****************************µ")
+          router.push("thanks");
+    }
+    return(
     <div
       className={clsx(
         "flex flex-raw h-screen justify-center ",
-        "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800"
+        "bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800",
       )}
     >
       <section
@@ -52,21 +42,17 @@ function SignIn() {
       >
         <div className="flex min-h-full flex-col justify-center lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img
-              className="mx-auto h-10 w-auto"
-              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-              alt="Your Company"
-            />
+          
             <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-blue-700">
               Connexion
             </h2>
           </div>
 
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form className="space-y-6" action="#" method="POST">
+            <form className="space-y-6" onSubmit={handleConnection} method="POST">
               <div>
                 <label
-                  for="email"
+                  htmlFor="email"
                   className="block text-sm font-medium leading-6 text-blue-700"
                 >
                   Email address
@@ -76,7 +62,9 @@ function SignIn() {
                     id="email"
                     name="email"
                     type="email"
-                    autocomplete="email"
+                    value={data.email}
+                    onChange={(e) => setData({ ...data, email: e.target.value }) }
+                    autoComplete="email"
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -86,10 +74,10 @@ function SignIn() {
               <div>
                 <div className="flex items-center justify-between">
                   <label
-                    for="password"
+                    htmlFor="password"
                     className="block text-sm font-medium leading-6 text-blue-700"
                   >
-                    Email adresse
+                    Mot de passe
                   </label>
                   <div className="text-sm">
                     <a
@@ -105,7 +93,8 @@ function SignIn() {
                     id="password"
                     name="password"
                     type="password"
-                    autocomplete="current-password"
+                    value={data.password}
+                    onChange={(e) => setData({ ...data, password: e.target.value }) }
                     required
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   />
@@ -123,12 +112,11 @@ function SignIn() {
             </form>
 
             <p className="mt-10 text-center text-sm text-blue-700">
-              vous n'êtes pas inscrits?
+              vous n&apos;êtes pas inscrits?
               <Link
                 href={{ pathname: "signUp" }}
                 className="font-semibold leading-6 text-indigo-100 hover:text-orange-500 text-blue-900"
               >
-                {" "}
                 Inscrivez-vous
               </Link>
             </p>
@@ -146,4 +134,4 @@ function SignIn() {
   );
 }
 
-export default SignIn;
+export default ConnexionPage;

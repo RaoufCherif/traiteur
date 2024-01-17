@@ -1,7 +1,7 @@
 "use client"
 import React, { FormEvent, useState } from "react";
 import Image from "next/image";
-import inscriptionImage from "../../../public/inscription_image.jpeg";
+import inscriptionImage from "../../../public/image_genere_ia.png";
 import clsx from "clsx";
 import { signIn } from "next-auth/react";
 import email from "next-auth/providers/email";
@@ -44,19 +44,14 @@ export function Inscription() {
 
   return (
     <div className="bg-slate-100">
-      <div className="flex flex-raw  justify-center p-48 itmes-center   h-screen      ">
+      <div className="flex flex-raw  justify-center  itmes-center   h-screen      ">
         <section
           id="inscription"
           className="flex flex-col gap-4 w-1/2 p-8 justify-center items-center  bg-gradient-to-r  from-orange-200 to-orange-100  "
         >
           <div className="flex min-h-full flex-col justify-center  pb-8 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-              <Image
-                className="mx-auto h-10 w-auto"
-                src=""
-                alt="Your Company"
-                width={5}
-              />
+          
               <h2 className="my-2 text-center text-2xl font-bold leading-9 tracking-tight text-blue-700 ">
                 Inscrivez-vous
               </h2>

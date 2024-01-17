@@ -10,3 +10,12 @@ declare module 'next-auth' {
         } & Session['user']
     }
 }
+
+declare module 'next-auth/jwt' {
+    interface JWT {
+      [key: string]: {
+        accessToken: string | undefined
+        refreshToken: string | undefined
+      }
+    }
+  }
