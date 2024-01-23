@@ -25,9 +25,8 @@ function ConnexionPage() {
             ...data,
             redirect: false,
           });
-
-          console.log("µ****************************µ")
-          router.push("thanks");
+            
+          router.push("dashboard");
     }
     return(
     <div

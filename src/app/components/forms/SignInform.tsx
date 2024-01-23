@@ -41,7 +41,7 @@ const SignInform = () => {
 
   const handlLogIn = async () => {
     const user = await prisma.user.findUnique({ where: { email } });
-    console.log("==============================================");
+
     try {
       const response = await fetch("api/auth", {
         method: "POST",
