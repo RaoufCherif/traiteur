@@ -3,6 +3,11 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import Button from "./Reseau";
 import { redirect } from "next/navigation";
+<<<<<<< HEAD
+=======
+import Image from "next/image";
+import logo  from "../../../public/logo.png" 
+>>>>>>> b4b6802 (ajouter des modification)
 
 import LogInButton from "./LogInButton";
 import { useSession } from "next-auth/react";
@@ -37,6 +42,7 @@ const Header = () => {
 
     <div className="flex flex-col  ">
 
+<<<<<<< HEAD
 >>>>>>> a5bde31 (update headers)
       <div className=" absolute left-0 ml-8 mt-8     ">
         
@@ -45,10 +51,12 @@ const Header = () => {
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> b4b6802 (ajouter des modification)
     <div className=" absolute left-0 ml-8 mt-8     ">
     <Image
       className="h-8 w-auto "
-      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+      src={logo}
       alt="Your Company"
     />
   </div>
@@ -95,7 +103,7 @@ const Header = () => {
                   className="hidden h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth="1.5"
+                  stroke-width="1.5"
                   stroke="currentColor"
                   aria-hidden="true"
                 >
