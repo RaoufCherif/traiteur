@@ -3,11 +3,8 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import Button from "./Reseau";
 import { redirect } from "next/navigation";
-<<<<<<< HEAD
-=======
 import Image from "next/image";
 import logo  from "../../../public/logo.png" 
->>>>>>> b4b6802 (ajouter des modification)
 
 import LogInButton from "./LogInButton";
 import { useSession } from "next-auth/react";
@@ -30,38 +27,24 @@ const Header = () => {
   };
 
   return (
-<<<<<<< HEAD
+
     <div className="flex flex-col  header">
-<<<<<<< HEAD
+
       <div className=" absolute left-0 ml-8 mt-8  text-white   ">
         Clafête
-=======
-=======
+ </div>
 
     <div className="flex flex-col  header">
 
     <div className="flex flex-col  ">
 
-<<<<<<< HEAD
->>>>>>> a5bde31 (update headers)
+
       <div className=" absolute left-0 ml-8 mt-8     ">
         
->>>>>>> 2760cda ( add navbar)
+
       </div>
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> b4b6802 (ajouter des modification)
-    <div className=" absolute left-0 ml-8 mt-8     ">
-    <Image
-      className="h-8 w-auto "
-      src={logo}
-      alt="Your Company"
-    />
-  </div>
-
->>>>>>> a5bde31 (update headers)
+ 
 
       <nav className="bg-gray-800   p-4  ">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -157,6 +140,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
+    </div>
     </div>
     </div>
   );
