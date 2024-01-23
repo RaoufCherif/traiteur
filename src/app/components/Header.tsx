@@ -26,8 +26,8 @@ const Header = () => {
 
   return (
     <div className="flex flex-col  header">
-      <div className=" absolute left-0 ml-8 mt-8     ">
-        
+      <div className=" absolute left-0 ml-8 mt-8  text-white   ">
+        Clafête
       </div>
 
       <nav className="bg-gray-800   p-4  ">
@@ -110,7 +110,7 @@ const Header = () => {
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
-                    Desserts
+                    Desserts 
                   </a>
                 </div>
               </div>
@@ -119,7 +119,7 @@ const Header = () => {
    
 
 
-        { status === "authenticated" ? <> <div  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"> {session?.user.email } </div>   <LogOutButton /> </>  : <LogInButton /> }  
+        { status === "authenticated" ? <> <div  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"> {session?.user.nom } </div>   <LogOutButton /> </>  : <LogInButton /> }  
             </div>
           </div>
         </div>
