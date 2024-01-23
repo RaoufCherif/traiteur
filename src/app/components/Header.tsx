@@ -25,10 +25,35 @@ const Header = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="flex flex-col  header">
+<<<<<<< HEAD
       <div className=" absolute left-0 ml-8 mt-8  text-white   ">
         Clafête
+=======
+=======
+
+    <div className="flex flex-col  header">
+
+    <div className="flex flex-col  ">
+
+>>>>>>> a5bde31 (update headers)
+      <div className=" absolute left-0 ml-8 mt-8     ">
+        
+>>>>>>> 2760cda ( add navbar)
       </div>
+<<<<<<< HEAD
+=======
+
+    <div className=" absolute left-0 ml-8 mt-8     ">
+    <Image
+      className="h-8 w-auto "
+      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+      alt="Your Company"
+    />
+  </div>
+
+>>>>>>> a5bde31 (update headers)
 
       <nav className="bg-gray-800   p-4  ">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -124,6 +149,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
+    </div>
     </div>
   );
 };
