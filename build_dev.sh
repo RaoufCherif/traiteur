@@ -19,5 +19,4 @@ if [ -d __tests__ ];
  else
    echo "Folder not found !"
 fi
-
 npm run build
