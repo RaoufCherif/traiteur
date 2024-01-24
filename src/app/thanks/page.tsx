@@ -37,6 +37,7 @@ function Thanks()  {
        return  (
    
 <Player
+    key={index} 
     autoplay
     loop
     src={item.animation}
