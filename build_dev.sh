@@ -9,7 +9,6 @@ if [ "$FILE" ];
     echo "File deleted ! "
 else
   echo " File not found ! "
-  cd
 fi
 
 
