@@ -94,3 +94,10 @@ installer node
   créer des pull-request
 
 # Rebase & Merge 
+
+# Git
+install tig pour voir les log 
+`sudo apt install tig`
+` git log -p build_dev.sh `
+
+
