@@ -13,13 +13,8 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import Home from '../page';
 import { steps } from '../../../util/getStepsThanks';
 
-const router = useRouter();
-
-console.log(router)
-
-
-
 function Thanks()  {
+  const router = useRouter();
   let data = steps();
   const searchParams = useSearchParams();
   const value = searchParams.get('value');
