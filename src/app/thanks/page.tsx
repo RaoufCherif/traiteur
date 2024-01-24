@@ -74,12 +74,12 @@ const Thanks = () => {
 
         <div className='flex flex-col mx-8 justify-center p-8  rounded-2xl items-center   bg-gradient-to-b from-purple-800 to-purple-500 '>
         <h1 className='text-white text-xl m-1'>Votre demande est prise en compte</h1>
-        <p className='text-white text-xl'>Vous recevrez notre newsletter à l'adresse que vous avez renseignée </p>
+        <p className='text-white text-xl'>Vous recevrez notre newsletter à l&rsquo;adresse que vous avez renseignée </p>
         <p className='text-4xl text-orange-400 m-4'>{value} </p>
         <Link href="/"
         className='text-white'
         >
-         Revenir à l'accueil  <FontAwesomeIcon  icon={ faHome } className=' w-7 text-white z-50'/>
+         Revenir à l&rsquo;accueil  <FontAwesomeIcon  icon={ faHome } className=' w-7 text-white z-50'/>
 
         </Link>
               
