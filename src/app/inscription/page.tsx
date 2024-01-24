@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation";
 
 
  
-export function Inscription() {
+ function Inscription() {
   const router = useRouter();
   const [data, setData] = useState({
     nom: "",
