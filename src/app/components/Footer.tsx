@@ -79,7 +79,7 @@ const handleSubmit = (event : React.FormEvent<HTMLFormElement>) => {
             <Link
             className='bg-black text-white p-1 ' 
             href={{
-              pathname : "thanks",
+              pathname : "/",
               query: {value}
               }}
             >  Ok </Link>
