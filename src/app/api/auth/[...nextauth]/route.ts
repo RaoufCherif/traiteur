@@ -64,7 +64,7 @@ const authOptions: NextAuthOptions = {
   ],
 
   callbacks: {
-    async singIn({ account, profile }: { account: any; profile: any }) {
+    async singIn({ account, profile }: { account: any; profile: Profile }) {
       console.log("********************************");
       console.log(account);
     },
@@ -90,12 +90,8 @@ const authOptions: NextAuthOptions = {
       user,
       account,
       profile,
-    }: {
-      token: JWT;
-      user: MyUser;
-      account: Account;
-      profile: Profile;
-    }) {
+
+    }: any ) {
       if (user) {
         const u = user as unknown as any;
         return {

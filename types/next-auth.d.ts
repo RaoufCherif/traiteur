@@ -10,7 +10,7 @@ declare module "next-auth-user-session" {
       nom?: string;
       prenom?: string;
       email?: string;
-      password: string;
+  
     }
   }
   
