@@ -64,14 +64,6 @@ const authOptions: NextAuthOptions = {
   ],
 
   callbacks: {
-    async singIn({ account, profile }: { account: any; profile: Profile }) {
-      console.log("********************************");
-      console.log(account);
-    },
-    async signOut () {
-   console.log('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$')
-    },
-    
     async session({ session, token }: { session: Session; token: JWT }) {
   
       return {
