@@ -5,7 +5,7 @@ import Image from "next/image";
 import rice from "../../../public/rice.jpg";
 import Link from "next/link";
 import Inscription from "../inscription/page";
-import signInImage from "../../../public/gateau_3_etages.jpg";
+import signInImage from "../../../public/logo.png";
 import GoogleSignIn from "../components/GoogleSignIn";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";

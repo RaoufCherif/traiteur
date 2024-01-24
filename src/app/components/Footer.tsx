@@ -101,7 +101,7 @@ const handleSubmit = (event : React.FormEvent<HTMLFormElement>) => {
 
           </div>
 
-          <p className='text-l flex justify-center p-7'>© 2023 Traiteur Parisien</p>
+          <p className='text-l flex justify-center p-7'>© Tous droits réservés - 2024 Raouf CHERIF</p>
     </section>
     </>
   )

@@ -1,7 +1,7 @@
 "use client"
 import React, { FormEvent, useState } from "react";
 import Image from "next/image";
-import inscriptionImage from "../../../public/image_genere_ia.png";
+import inscriptionImage from "../../../public/logo.png";
 import clsx from "clsx";
 import { signIn } from "next-auth/react";
 import email from "next-auth/providers/email";
