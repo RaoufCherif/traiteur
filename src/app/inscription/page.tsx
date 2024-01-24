@@ -43,7 +43,7 @@ import { useRouter } from "next/navigation";
   }
 
   return (
-    <div className="bg-slate-100">
+
       <div className="flex flex-raw  justify-center  itmes-center   h-screen   bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800   ">
         <section
           id="inscription"
@@ -152,7 +152,7 @@ import { useRouter } from "next/navigation";
           className="w-1/2  "
         />
       </div>
-    </div>
+    
   );
 }
 
