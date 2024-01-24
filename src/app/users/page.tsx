@@ -1,7 +1,7 @@
 import React from "react";
 import { getUsers } from "../../../util/getUsers";
 
-export async function Users() {
+ async function Users() {
   const users = await getUsers();
   const usersLength = users.length;
 
