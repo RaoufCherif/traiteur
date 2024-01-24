@@ -62,7 +62,10 @@ import { useRouter } from "next/navigation";
                 onSubmit={registerUser}
                 className={clsx("flex flex-col gap-3")}
               >
-                <label>Nom :</label>
+                <label
+                 htmlFor="nom"
+                 className="block text-sm font-medium leading-6 text-blue-700"
+                >Nom :</label>
                 <input
                   type="text"
                   name="nom"
@@ -70,12 +73,7 @@ import { useRouter } from "next/navigation";
                   value={data.nom}
                   onChange={(e) => {setData({ ...data, nom: e.target.value})}}
                   placeholder="Entrer votre nom"
-                  className={clsx(
-                    "border-transparent border-b-amber-900 bg-transparent text-white",
-                    " hover:bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-yellow-200 via-yellow-400 to-yellow-700",
-                    " hover:border-transparent  ",
-                    "placeholder:text-gray-500",
-                  )}
+                  className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   required
                 />
 

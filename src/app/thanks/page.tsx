@@ -23,7 +23,7 @@ interface Step {
 }
 
 
-const Thanks = () => {
+function Thanks()  {
   const steps: Step[] = [
     {
       id: 1,
