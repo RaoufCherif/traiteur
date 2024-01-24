@@ -44,10 +44,10 @@ import { useRouter } from "next/navigation";
 
   return (
     <div className="bg-slate-100">
-      <div className="flex flex-raw  justify-center  itmes-center   h-screen      ">
+      <div className="flex flex-raw  justify-center  itmes-center   h-screen   bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800   ">
         <section
           id="inscription"
-          className="flex flex-col gap-4 w-1/2 p-8 justify-center items-center  bg-gradient-to-r  from-orange-200 to-orange-100  "
+          className="flex flex-col gap-4 w-1/2 p-8 justify-center items-center   "
         >
           <div className="flex min-h-full flex-col justify-center  pb-8 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
