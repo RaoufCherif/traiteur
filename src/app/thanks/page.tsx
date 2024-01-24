@@ -13,7 +13,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 import Home from '../page';
 import { steps } from '../../../util/getStepsThanks';
 
-const router = useRouter;
+const router = useRouter();
 
 console.log(router)
 
