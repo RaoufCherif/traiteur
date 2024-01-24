@@ -17,11 +17,6 @@ const router = useRouter;
 
 console.log(router)
 
-interface Step {
-  id: number;
-  text: string;
-  animation: string;
-}
 
 
 function Thanks()  {

@@ -113,7 +113,7 @@ function ConnexionPage() {
             <p className="mt-10 text-center text-sm text-blue-700">
               vous n&apos;êtes pas inscrits?
               <Link
-                href={{ pathname: "signUp" }}
+                href={{ pathname: "inscription" }}
                 className="font-semibold leading-6 text-indigo-100 hover:text-orange-500 text-blue-900"
               >
                 Inscrivez-vous
