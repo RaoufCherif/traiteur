@@ -4,21 +4,20 @@ import { useRouter } from "next/navigation";
 import Button from "./Reseau";
 import { redirect } from "next/navigation";
 import Image from "next/image";
-import logo  from "../../../public/logo.png" 
+import logo from "../../../public/logo.png";
 
 import LogInButton from "./LogInButton";
 import { useSession } from "next-auth/react";
-import { signOut } from "next-auth/react"
+import { signOut } from "next-auth/react";
 import LogOutButton from "./LogOutButton";
+import SignUpButton from "./SignUpButton";
 
 const Header = () => {
-
-  const {data: session, status} = useSession()
+  const { data: session, status } = useSession();
 
   const logOut = async () => {
     await signOut();
   };
-
 
   const router = useRouter();
 
@@ -27,25 +26,9 @@ const Header = () => {
   };
 
   return (
-
-    <div className="flex flex-col  header">
-
-      <div className=" absolute left-0 ml-8 mt-8  text-white   ">
-        Clafête
-      </div>
-
-    <div className="flex flex-col  header">
-
-    <div className="flex flex-col  ">
-
-
-      <div className=" absolute left-0 ml-8 mt-8     ">
-        
-
-      </div>
-
- 
-
+    <div className="flex flex-raw   header">
+      <div className=" absolute left-0 ml-8 mt-8  text-white   "> 
+      <a href="/"> Clafête </a></div>
       <nav className="bg-gray-800   p-4  ">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
@@ -126,19 +109,32 @@ const Header = () => {
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
-                    Desserts 
+                    Desserts
                   </a>
                 </div>
               </div>
             </div>
-            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-        { status === "authenticated" ? <> <div  className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"> {session?.user.nom } </div>   <LogOutButton /> </>  : <LogInButton /> }  
-            </div>
           </div>
         </div>
       </nav>
-    </div>
-    </div>
+      <div className=" absolute right-0 inset-y-0  flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0  mt-12 ">
+        {status === "authenticated" ? (
+          
+            <div className=" absolute text-gray-300 right-0 hover:text-white rounded-md  py-2 text-sm font-medium  ">
+              {session?.user.nom}
+              <LogOutButton />
+            </div>
+         
+          
+        ) : (
+          <div className=" absolute text-gray-300 right-0 flex gap-6  pr-12">
+            <LogInButton />
+            <SignUpButton />
+         
+            </div>
+        
+        )}
+      </div>
     </div>
   );
 };
