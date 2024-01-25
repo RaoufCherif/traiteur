@@ -12,7 +12,7 @@ import { fetchSucre } from "../../../util/getSucres";
 function SectionSucre() {
   let data = fetchSucre();
   return (
-    <section className=" bg-green-100 ">
+    <section className=" bg-green-100 " id="sectionSucre">
       <div className="flex flex-col  items-center">
         <h2 className="my-14  font-serif hover:font-sans  text-rose-400 text-4xl ">
           {" "}

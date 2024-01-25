@@ -13,7 +13,7 @@ function SectionSale() {
   let data = fetchData();
 
   return (
-    <section className=" bg-rose-300 ">
+    <section className=" bg-rose-300 " id="sectionSale">
       <div className="flex flex-col  items-center">
         <h2 className="my-14  font-serif hover:font-sans  text-white text-4xl ">
           {" "}

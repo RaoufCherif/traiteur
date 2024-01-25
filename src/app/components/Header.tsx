@@ -26,8 +26,8 @@ const Header = () => {
   };
 
   return (
-    <div className="flex flex-raw   header">
-      <div className=" absolute left-0 ml-8 mt-8  text-white   "> 
+    <div className="flex flex-raw   header ">
+      <div className=" absolute left-0 ml-8 mt-8  text-white   hover:bg-orange-700 p-2 rounded-md"> 
       <a href="/"> Clafête </a></div>
       <nav className="bg-gray-800   p-4  ">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -88,28 +88,34 @@ const Header = () => {
                   {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                   <a
                     href="#"
-                    className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className=" text-white hover:bg-orange-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                     aria-current="page"
                   >
                     Accueil
                   </a>
                   <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    href="#sectionSale"
+                    className="text-gray-300 hover:bg-orange-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
-                    Repas
+                    Salé
                   </a>
                   <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    href="#sectionSucre"
+                    className="text-gray-300 hover:bg-orange-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
-                    Snacks
+                    Sucré
                   </a>
                   <a
-                    href="#"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    href="#patisserie"
+                    className="text-gray-300 hover:bg-orange-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
-                    Desserts
+                    Patisserie
+                  </a>
+                  <a
+                    href="#traditionnel"
+                    className="text-gray-300 hover:bg-orange-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                  >
+                    Traditionnel
                   </a>
                 </div>
               </div>
@@ -127,7 +133,7 @@ const Header = () => {
          
           
         ) : (
-          <div className=" absolute text-gray-300 right-0 flex gap-6  pr-12">
+          <div className=" absolute right-0 flex gap-6  pr-12">
             <LogInButton />
             <SignUpButton />
          

@@ -14,7 +14,6 @@ import LogInButton from "../app/components/LogInButton";
 import clsx from "clsx";
 
 export default function Home() {
-
   return (
     <main>
       <div
@@ -23,8 +22,8 @@ export default function Home() {
           "flex-col justify-start  items-center  ",
         )}
       >
+        
         <Image src={falafel} alt="background image" fill />
-
         <Header />
         <div
           id="accueil_section_1"
@@ -56,15 +55,7 @@ export default function Home() {
           </div> */}
         </div>
       </div>
-
-
-
-
-
-
-
       <SectionSale />
-
       <SectionSucre />
       <NosRepats />
       <TraditionNouveaute />

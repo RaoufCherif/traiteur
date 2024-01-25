@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import chef from "../../../public/chef_souriant.png"
-import sucre from "../../../public/mini_sucré.jpeg"
+import sucre from "../../../public/gateau_mauve.jpg"
 import snak from "../../../public/snack1.png"
 import couscous from "../../../public/couscous.jpg"
 function NosSpecialite() {
@@ -10,22 +10,22 @@ function NosSpecialite() {
    <div className='bg-sky-100  p-4'>
       <div className='bg-sky-100 flex flex-col items-center m-4 p-8'>
     <section>
-                     <h2 className=' flex justify-center p-4 mb-12 text-3xl'> Nos spécialités</h2>
+                     <h2 className=' flex justify-center p-4 mb-12 text-3xl font-serif hover:font-sans'> Nos spécialités</h2>
                      </section>
                 <section className='flex flex-row gap-12 mb-8 justify-center'>
                             <div className='flex flex-col  bg-black justify-between items-center p-4 w-52 h-72'>
-                                <h3 className='text-white m-2'>Plat Tradicionnel</h3>
-                                <Image src={couscous}   alt='chef'  className='rounded-xl'  />
+                                <h3 className='text-white m-2'>Traditionnel</h3>
+                                <Image src={couscous}   alt='chef'  className='rounded-xl  h-48 '  />
                                 <button className='text-white m-4'>Découvrir</button>
                             </div>
                             <div className='flex flex-col  bg-black justify-between items-center  p-4 w-52 h-72 '>
-                                <h3 className='text-white m-2'>Buffet de fête</h3>
-                                <Image src={snak}  alt='chef'  className='rounded-xl'  />
+                                <h3 className='text-white m-2'>Buffets </h3>
+                                <Image src={snak}  alt='chef'  className='rounded-xl  h-48 '  />
                                 <button className='text-white m-4'>Découvrir</button>
                             </div>
                             <div className='flex flex-col  bg-black justify-between items-center p-4  w-52 h-72 '>
-                                <h3 className='text-white'>Gateau d&apos;ânniversaire</h3>
-                                <Image src={sucre}     alt='chef'  className='rounded-xl '   />
+                                <h3 className='text-white'>Gâteaux </h3>
+                                <Image src={sucre}     alt='chef'  className='rounded-xl  h-{{42px }} '   />
                                 <button className='text-white m-4'>Découvrir</button>
                             </div>
 

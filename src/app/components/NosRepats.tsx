@@ -6,8 +6,8 @@ function NosRepats() {
   return (
 
 
-    <section className=" bg-sky-100 flex flex-col justify-center items-center ">
-        <h2 className='p-4 m-8 font-serif hover:font-sans text-green-700 text-4xl '> Nos Valeurs </h2>
+    <section className=" bg-sky-100 flex flex-col justify-center items-center " id="patisserie">
+        <h2 className='p-4 m-8 font-serif hover:font-sans text-green-700 text-4xl '> Patisserie</h2>
         <div className='mb-16 flex flex-row max-w-4xl'>
             <Image id='image_rice' src={gateau}  alt="background image"  className=' w-1/2  rounded-xl '/>
             <div>
