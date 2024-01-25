@@ -60,12 +60,12 @@ function SectionSale() {
         <button
           className={clsx(
             "rounded p-4 mb-10 ",
-            " bg-gradient-to-r from-orange-700 to-rose-600 ",
+            " bg-gradient-to-r from-orange-400 to-rose-500 ",
             "text-white",
-            "hover:bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-rose-500 to-indigo-700",
+            "hover:bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-rose-400 to-indigo-700",
           )}
         >
-          Commander
+          Commander 
         </button>
       </div>
     </section>
