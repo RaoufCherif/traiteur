@@ -9,8 +9,12 @@ const Dashboard = () => {
    
     const {data: session, status} = useSession();
     console.log("Je suis ", session?.user)
-if (status === "authenticated") {
+
     return (
+          <main>
+            <p>Bonjour</p>
+
+      {  status === "authenticated" ? 
         <section 
         className=' flex  flex-col m-48 gap-6 items-center'
         >
@@ -30,8 +34,15 @@ if (status === "authenticated") {
 
 
     </section>
+   : <p> Vous êtes pas connecter</p>
+        
+    }
+
+
+   
+</main>
     )
-}
+
 
 }
 
