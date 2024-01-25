@@ -63,6 +63,8 @@ const authOptions: NextAuthOptions = {
     }),
   ],
 
+
+
   callbacks: {
     async session({ session, token }: { session: Session; token: JWT }) {
   
@@ -97,7 +99,7 @@ const authOptions: NextAuthOptions = {
     },
   },
 
-  secret: process.env.NEXTAUTH_SECRET as string,
+  secret:process.env.SECRET,
   session: {
     strategy: "jwt",
   },
