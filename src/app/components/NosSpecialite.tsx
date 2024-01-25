@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import chef from "../../../public/chef.jpeg"
+import chef from "../../../public/chef_souriant.png"
 import sucre from "../../../public/mini_sucré.jpeg"
 import snak from "../../../public/snack1.png"
 import couscous from "../../../public/couscous.jpg"
