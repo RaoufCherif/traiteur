@@ -24,8 +24,8 @@ function NosSpecialite() {
                                 <button className='text-white m-4'>Découvrir</button>
                             </div>
                             <div className='flex flex-col  bg-black justify-between items-center p-4  w-52 h-72 '>
-                                <h3 className='text-white'>Gâteaux </h3>
-                                <Image src={sucre}     alt='chef'  className='rounded-xl  h-{{42px }} '   />
+                                <h3 className='text-white m-2'>Gâteaux </h3>
+                                <Image src={sucre}     alt='chef'  className='rounded-xl  h-4/6  '   />
                                 <button className='text-white m-4'>Découvrir</button>
                             </div>
 
