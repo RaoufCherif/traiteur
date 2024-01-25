@@ -2,20 +2,11 @@ import { PrismaClient, User } from "@prisma/client";
 import NextAuth, { Account, Profile } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
-import { MyUser } from "next-auth-user-session";
 import { Session } from "next-auth";
-
 import { NextAuthOptions } from "next-auth";
-
 import { JWT } from "next-auth/jwt";
-import email from "next-auth/providers/email";
-
-
-
 
 const prisma = new PrismaClient();
-
-console.log(prisma.user.findUnique({ where: { email: "545454" } }));
 
 const authOptions: NextAuthOptions = {
   providers: [
@@ -33,7 +24,7 @@ const authOptions: NextAuthOptions = {
         if (!credentials || !credentials.email || !credentials.password) {
           return null;
         }
-        console.log("**************************************");
+   
         const dbUser = await prisma.user.findUnique({
           where: {
             email: credentials.email,
@@ -63,9 +54,8 @@ const authOptions: NextAuthOptions = {
     }),
   ],
 
-
-
   callbacks: {
+
     async session({ session, token }: { session: Session; token: JWT }) {
   
       return {
@@ -98,6 +88,7 @@ const authOptions: NextAuthOptions = {
       return token;
     },
   },
+
 
   secret:process.env.SECRET,
   session: {

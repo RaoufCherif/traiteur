@@ -7,7 +7,7 @@ import { faSignOut } from '@fortawesome/free-solid-svg-icons'
 
 const LogOutButton = () => {
     const logOut = async () => {
-        await signOut();
+        await signOut({callbackUrl: process.env.NEXTAUTH_URL   });
       };
   return (
     <Button variant="text" color="primary" className="mt-0 " data-testid={'logInButton'}  onClick={() => logOut()}>
