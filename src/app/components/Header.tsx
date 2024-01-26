@@ -127,7 +127,7 @@ const Header = () => {
         {status === "authenticated" ? (
           
             <div className=" absolute text-gray-300 right-0 hover:text-white rounded-md  py-2 text-sm font-medium  ">
-              {session?.user.nom}
+              {session?.user.prenom}
               <LogOutButton />
             </div>
          
