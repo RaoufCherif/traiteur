@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { avisClients } from "../../../util/getAvisClients";
 import Image from "next/image";
-import pene from "../../../public/pene.jpeg";
+import burgerIa from "../../../public/burger_ia.png";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -104,7 +104,7 @@ function AvisClients() {
           </form>
         </div>
         <div className="w-1/2">
-          <Image src={pene} width={1200} alt="spagiti" />
+          <Image src={burgerIa} width={1200} alt="spagiti" />
         </div>
       </section>
     </section>
