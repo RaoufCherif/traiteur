@@ -13,6 +13,8 @@ import Footer from "./components/Footer";
 import LogInButton from "../app/components/LogInButton";
 import clsx from "clsx";
 
+
+
 export default function Home() {
   return (
     <main>

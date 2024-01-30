@@ -7,6 +7,7 @@ import { Smooch } from "next/font/google";
 import Providers from "./components/Providers";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+require('dotenv').config();
 
 const kalam = Kalam({
   subsets: ["latin"],
