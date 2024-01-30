@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Header from "./components/Header";
 import falafel from "public/falafels.jpg";
+import burgerAuSouman from "public/burger_au_souman.jpg"
 import Reseau from "./components/Reseau";
 import Link from "next/link";
 import SectionSale from "./components/SectionSale";
@@ -25,7 +26,7 @@ export default function Home() {
         )}
       >
         
-        <Image src={falafel} alt="background image" fill />
+        <Image src={burgerAuSouman} alt="background image" fill />
         <Header />
         <div
           id="accueil_section_1"
