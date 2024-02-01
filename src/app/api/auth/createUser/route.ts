@@ -2,10 +2,17 @@ import bcrypt from "bcrypt";
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
+import { v4 as uuidv4 } from 'uuid';
+
+function generateToken() {
+  return uuidv4();
+}
 
 const prisma = new PrismaClient();
 
 export async function POST(request: NextRequest, res: NextResponse) {
+
+  const token = generateToken();
   const body = await request.json();
   const { nom, prenom, email, password } = body;
   if (
