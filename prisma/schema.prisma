@@ -17,6 +17,8 @@ model User {
   prenom String
   email String  @unique 
   password String
+  emailConfirmed Boolean @default(false)
+  confirmationToken String 
 
   posts Post[]
 }

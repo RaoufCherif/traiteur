@@ -2,7 +2,7 @@ import bcrypt from "bcrypt";
 import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 function generateToken() {
   return uuidv4();
@@ -11,7 +11,6 @@ function generateToken() {
 const prisma = new PrismaClient();
 
 export async function POST(request: NextRequest, res: NextResponse) {
-
   const token = generateToken();
   const body = await request.json();
   const { nom, prenom, email, password } = body;
@@ -41,36 +40,48 @@ export async function POST(request: NextRequest, res: NextResponse) {
       prenom: body.data.prenom,
       email: body.data.email,
       password: hashedPassword,
+      confirmationToken: token,
     },
   });
-  console.log(process.env.SENDGRID_API_KEY, "JE suis api_key")
 
-  console.log("************************************")
-  console.log(request.method , "je suis request.method")
+  const lastRecord = await prisma.user.findFirst({
+    orderBy: {
+      id: "desc",
+    },
+  });
+
+  const lastRecordId = lastRecord?.id;
+
+  const lastRegisteredUser = await prisma.user.findUnique({
+    where: { id: lastRecordId },
+  });
+  console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+  console.log(lastRegisteredUser);
+  console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
+  console.log(process.env.SENDGRID_API_KEY, "JE suis api_key");
 
   if (request.method != "POST") {
     return new NextResponse("Method Invalide");
   }
 
-
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-  
-
 
   const sendGridMail = {
-    to: "yahia19raouf@gmail.com",
-    from: "raouf.etapweb@gmail.com",
-    templateId: "d-2aec903079e145ee922c474052bf02cb",
+    to: body.data.email,
+    from: process.env.EMAIL_SENT_FROM,
+    templateId: process.env.TEMPLATEID,
+
     dynamic_template_data: {
-        prenom: body.data.prenom,
-        nom: body.data.nom,
-        email: body.data.email,
+      id: lastRegisteredUser?.id,
+      prenom: lastRegisteredUser?.prenom,
+      nom: lastRegisteredUser?.nom,
+      email: lastRegisteredUser?.email,
+      token: lastRegisteredUser?.confirmationToken,
     },
   };
 
-   await sgMail.send(sendGridMail);
-   res.json(); 
-  
+  await sgMail.send(sendGridMail);
 
   return NextResponse.json(newUser);
 }

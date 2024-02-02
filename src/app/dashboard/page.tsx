@@ -6,11 +6,7 @@ import Link from "next/link";
 import { NextApiRequest } from "next";
 
 const Dashboard = (req: NextApiRequest) => {
-  const nom = 1233 
-  req.query.nom = "1234"
-
   const { data: session, status } = useSession();
-
 
   return (
     <main>
@@ -28,16 +24,13 @@ const Dashboard = (req: NextApiRequest) => {
             <p>Nom : {session.user.nom}</p>
             <p>Prenom : {session.user.prenom}</p>
           </div>
-    
 
           <Link
-          href="confirmation?nom=1234"
+            href="confirmation?token=1234&id=1578"
             className="bg-blue-500 p-2 text-white rounded-md"
           >
-            {" "}
             Confirm
-            </Link>
-          
+          </Link>
         </section>
       ) : (
         <p> Vous êtes pas connecter</p>
@@ -45,7 +38,5 @@ const Dashboard = (req: NextApiRequest) => {
     </main>
   );
 };
-
-
 
 export default Dashboard;

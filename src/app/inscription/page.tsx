@@ -15,7 +15,7 @@ function Inscription() {
     nom: "",
     prenom: "",
     email: "",
-    password: "",
+    password: ""
   });
   const registerUser = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -33,7 +33,7 @@ function Inscription() {
       nom: "",
       prenom: "",
       email: "",
-      password: "",
+      password: ""
     });
     router.push("/signIn");
   };
@@ -129,6 +129,9 @@ function Inscription() {
                 required
               />
               <div className="flex flex-raw gap-2 justify-center justify-between">
+               
+           
+               
                 <button
                   type="submit"
                   className="flex w-1/2 pt-1 justify-center rounded-md bg-indigo-600  text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
