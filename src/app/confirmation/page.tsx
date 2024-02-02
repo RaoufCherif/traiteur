@@ -1,64 +1,50 @@
-"use client"
+"use client";
 import { redirect } from "next/dist/server/api-utils";
 import { useEffect, useState } from "react";
 import { MailService } from "@sendgrid/mail";
 
-
-
-
-
 function ConfirmEmail() {
+  const [id, setId]: any = useState("");
+  const [token, setToken]: any = useState("");
 
-const [id, setId] : any= useState('');
-const [token, setToken] : any= useState('');
-
-useEffect(() => {
+  useEffect(() => {
     const query = new URLSearchParams(window.location.search);
-    setId(query.get('id'));
-    setToken(query.get('token'))
+    setId(query.get("id"));
+    setToken(query.get("token"));
+  }, []);
 
-}, [])
-
-
-const confirmUser = async () => {
-
+  const confirmUser = async () => {
     try {
-        const user =    {id: "1234567890", token: "abcdefghijklmnopqrstuvwxyz"}
-        if(user.id === id && user.token === token) {
+      const user = { id: "1234567890", token: "abcdefghijklmnopqrstuvwxyz" };
+      if (user.id === id && user.token === token) {
+        alert("Bienvenue ! ");
+      }
 
-          alert("Bienvenue ! ")
-        } 
-
-        const confirmUrl = await SendGridMail.getUrl('confirm', id, token);
+      const confirmUrl = await SendGridMail.getUrl("confirm", id, token);
     } catch (error) {
-        error 
+      error;
     }
+  };
+
+  return (
+    <main className=" h-screen flex flex-col justify-center gap-4 items-center   ">
+      <form onSubmit={confirmUser}>
+        <h1>{id}</h1>
+        <h1>{token}</h1>
+
+        <button
+          type="submit"
+          className="bg-blue-700 text-white p-2 rounded-md "
+        >
+          {" "}
+          <h1>Email confirmer !</h1>{" "}
+        </button>
+      </form>
+    </main>
+  );
 }
-    
-    return (
-        <main className=" h-screen flex flex-col justify-center gap-4 items-center   ">
-
-            <form onSubmit={confirmUser}>
-          
-            <h1>{id}</h1>
-            <h1>{token}</h1>
-
-            <button 
-            type="submit"
-            className="bg-blue-700 text-white p-2 rounded-md ">  <h1>Email confirmer !</h1> </button>
-
-            </form>
-        </main>
-    )
-}
-
 
 export default ConfirmEmail;
-
-
-
-
-
 
 // // pages/confirm.tsx
 // import React from 'react';
