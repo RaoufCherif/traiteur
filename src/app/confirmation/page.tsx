@@ -22,7 +22,11 @@ function  ConfirmEmail() {
     email,
   }
 
-  const confirmUser = async () => {
+  const confirmUser = async (e: { preventDefault: () => void }) => {
+      e.preventDefault();
+
+
+
 
     const response = await fetch(process.env.BASE_URL + "/api/auth/confirmEmail", {
       method: "POST",
@@ -42,12 +46,13 @@ function  ConfirmEmail() {
         <h1>Votre ID c&apos;est :  {id}</h1>
         <h1>Votre Token c&apos;est : {token}</h1>
         <h1>Votre Email c&apos;est : {email}</h1>
+   
 
         <button
           type="submit"
           className="bg-blue-700 text-white p-2 rounded-md "
         >
-          <h1>Confirmer votre email !</h1>
+          Confirmer votre email !
         </button>
       </form>
     </main>

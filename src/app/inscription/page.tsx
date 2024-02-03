@@ -35,7 +35,7 @@ function Inscription() {
       email: "",
       password: ""
     });
-    router.push("/signIn");
+    router.push("/verifier");
   };
   return (
     <div className="flex flex-raw  justify-center  itmes-center   h-screen   bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800   ">

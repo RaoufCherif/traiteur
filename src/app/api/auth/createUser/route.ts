@@ -55,9 +55,7 @@ export async function POST(request: NextRequest, res: NextResponse) {
   const lastRegisteredUser = await prisma.user.findUnique({
     where: { id: lastRecordId },
   });
-  console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
-  console.log(lastRegisteredUser);
-  console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$");
+
 
   console.log(process.env.SENDGRID_API_KEY, "JE suis api_key");
 

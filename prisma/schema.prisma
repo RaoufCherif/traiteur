@@ -1,6 +1,3 @@
-// This is your Prisma schema file,s cachés
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -10,24 +7,21 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-
 model User {
-  id    Int    @id @default(autoincrement())
-  nom String
-  prenom String
-  email String  @unique 
-  password String
-  emailConfirmed Boolean @default(false)
-  confirmationToken String 
-
-  posts Post[]
+  id                Int     @id @default(autoincrement())
+  nom               String
+  prenom            String
+  email             String  @unique
+  password          String
+  emailConfirmed    Boolean @default(false)
+  confirmationToken String
+  posts             Post[]
 }
 
 model Post {
-  id       Int  @id @default(autoincrement())
-  avis String
-  rate Int
-
-  author   User @relation(fields: [authorId], references: [id])
+  id       Int    @id @default(autoincrement())
+  avis     String
+  rate     Int
   authorId Int
+  author   User   @relation(fields: [authorId], references: [id])
 }
