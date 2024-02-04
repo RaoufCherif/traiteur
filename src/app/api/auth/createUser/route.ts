@@ -62,8 +62,12 @@ export async function POST(request: NextRequest, res: NextResponse) {
   if (request.method != "POST") {
     return new NextResponse("Method Invalide");
   }
+ 
+// Use the nullish coalescing operator (??) to provide a default string if the value is undefined
+  const sgMailTypeNotUndefind = "";
+  const sendGridMailUn: never[] = [];
 
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+    sgMail.setApiKey( sgMailTypeNotUndefind ??  process.env.SENDGRID_API_KEY  ) ;
 
   const sendGridMail = {
     to: body.data.email,
@@ -79,7 +83,7 @@ export async function POST(request: NextRequest, res: NextResponse) {
     },
   };
 
-  await sgMail.send(sendGridMail);
+  await sgMail.send(sendGridMailUn ?? sendGridMail);
 
   return NextResponse.json(newUser);
 }
