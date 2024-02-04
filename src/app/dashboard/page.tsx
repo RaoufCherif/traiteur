@@ -3,9 +3,8 @@ import React from "react";
 import { Session } from "next-auth-user-session";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-import { NextApiRequest } from "next";
 
-const Dashboard = (req: NextApiRequest) => {
+const Dashboard = () => {
   const { data: session, status } = useSession();
 
   return (
