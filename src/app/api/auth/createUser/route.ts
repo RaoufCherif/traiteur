@@ -3,6 +3,7 @@ import { PrismaClient } from "@prisma/client";
 import { NextRequest, NextResponse } from "next/server";
 import sgMail from "@sendgrid/mail";
 import { v4 as uuidv4 } from "uuid";
+import { getServerSideProps } from "next/dist/build/templates/pages";
 
 function generateToken() {
   return uuidv4();
@@ -56,20 +57,17 @@ export async function POST(request: NextRequest, res: NextResponse) {
     where: { id: lastRecordId },
   });
 
-
   console.log(process.env.SENDGRID_API_KEY, "JE suis api_key");
 
   if (request.method != "POST") {
     return new NextResponse("Method Invalide");
   }
- 
-// Use the nullish coalescing operator (??) to provide a default string if the value is undefined
-  const sgMailTypeNotUndefind = "";
-  const sendGridMailUn: never[] = [];
 
-    sgMail.setApiKey( sgMailTypeNotUndefind ??  process.env.SENDGRID_API_KEY  ) ;
+  // Use the nullish coalescing operator (??) to provide a default string if the value is undefined
 
-  const sendGridMail = {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY ?? "");
+
+  const sendGridMail: any = {
     to: body.data.email,
     from: process.env.EMAIL_SENT_FROM,
     templateId: process.env.TEMPLATEID,
@@ -83,7 +81,9 @@ export async function POST(request: NextRequest, res: NextResponse) {
     },
   };
 
-  await sgMail.send(sendGridMailUn ?? sendGridMail);
+  await sgMail.send(sendGridMail);
+
+
 
   return NextResponse.json(newUser);
 }

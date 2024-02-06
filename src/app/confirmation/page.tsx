@@ -2,8 +2,13 @@
 import { redirect } from "next/dist/server/api-utils";
 import { useEffect, useState } from "react";
 import { MailService } from "@sendgrid/mail";
+import { useRouter } from "next/navigation";
+
+
 
 function  ConfirmEmail() {
+
+  const route = useRouter();
   const [id, setId]: any = useState("");
   const [token, setToken]: any = useState("");
   const [email, setEmail]: any = useState("");
@@ -24,10 +29,6 @@ function  ConfirmEmail() {
 
   const confirmUser = async (e: { preventDefault: () => void }) => {
       e.preventDefault();
-
-
-
-
     const response = await fetch(process.env.BASE_URL + "/api/auth/confirmEmail", {
       method: "POST",
       headers: {
@@ -36,9 +37,12 @@ function  ConfirmEmail() {
       body: JSON.stringify({ data }),
     });
   
-  
+route.push('/signIn')
 
   };
+
+
+
 
   return (
     <main className=" h-screen flex flex-col justify-center gap-4 items-center   ">
