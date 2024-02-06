@@ -43,7 +43,10 @@ const authOptions: NextAuthOptions = {
         if (!passwordMatch) {
           return null;
         }
-        console.log(dbUser);
+
+        if(dbUser.emailConfirmed === false){
+          return null;
+        }
         return {
           id: dbUser.id + "",
           email: dbUser.email,
