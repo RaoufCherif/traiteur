@@ -1,73 +1,74 @@
 import React from "react";
 import Image from "next/image";
 import snack1 from "../../../public/mixt_sale_ia_1.png";
-import mini_burger from "../../../public/mini_burger.jpg";
-import mini_rols from "../../../public/mini_rol.jpg";
-import mini_piza from "../../../public/mini_pizza.jpg";
-import mini_brics from "../../../public/mini_brics.jpeg";
-import mini_croissants from "../../../public/mini_croissant.jpeg";
 import { fetchData } from "../../../util/getSales";
 import clsx from "clsx";
+
+
 
 function SectionSale() {
   let data = fetchData();
 
+
   return (
-    <section className="relative bg-rose-300  " id="sectionSale">
-      <div className=" flex flex-col  items-center">
-     <div className=" ">
-        <Image src={snack1} width="1977" height="459" alt="background image"  className="" />
-        <div className=" flex  items-center justify-center">
-        <h2 className=" my-14  font-serif hover:font-sans  text-white text-4xl ">
-          {" "}
-          Mini Salés Faits Maison
-        </h2> 
-        </div>
-        </div>
+    <main className=" bg-rose-300 flex flex-col " >
 
-        <div className=" relative flex flex-col  items-center">
+      <section>
+
+          <div  className=" flex justify-center   bg-[url('../../public/mixt_sale_ia_1.png')]    bg-no-repeat bg-cover min-h-screen min-w-screen"  >
+                  <h2 className=" font-serif hover:font-sans  text-white text-4xl pt-12">
+                
+                    Mini Salés Faits Maison
+                  </h2> 
+                  </div>
 
 
-        <h2 className="mt-20  font-serif hover:font-sans  text-white text-4xl ">
-     
+                  </section> 
+           <section>
 
-          {" "}
-          Cinq types de salés
-        </h2>
-        <h6 className="mb-20  font-serif hover:font-sans  text-white  ">
-          {" "}
-          DANS CHAQUE PLATEAU
-        </h6>
+                <div>
+                <div className=" mt-12 flex flex-col  items-center">
+          <h2 className=" font-serif hover:font-sans  text-white text-4xl ">
+            Cinq types de salés
+          </h2>
+          <h6 className="mb-20  font-serif hover:font-sans  text-white  ">
+            DANS CHAQUE PLATEAU
+          </h6>
 
-        <div className="flex flex-raw gap-10 mb-20">
-          {data.map((item, index) => {
-            return (
-              //  <li key={index}>{item}</li>
+          <div className="flex flex-raw gap-10 mb-20">
+            {data.map((item, index) => {
+              return (
+                //  <li key={index}>{item}</li>
 
-              <div key={index} className=" flex flex-col items-center gap-4">
-                <h4 className="  font-serif hover:font-sans  text-white text-lg">
-                  {item.name}
-                </h4>
-                <Image
-                  src={"/" + item.image}
-                  width="170"
-                  height="150"
-                  alt="burger"
-                />
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <div className=" mt-10 flex flex-col  items-center">
-        <h2 className=" font-serif hover:font-sans  text-white text-4xl ">
-          35€ pour 40 pièces
-        </h2>
-        <h6 className="mb-20  font-serif hover:font-sans text-white ">
-          8 pièces de chaque types
-        </h6>
-        </div>
-        <button
+                <div key={index} className=" flex flex-col items-center gap-4">
+                  <h4 className="  font-serif hover:font-sans  text-white text-lg">
+                    {item.name}
+                  </h4>
+                  <Image
+                    src={"/" + item.image}
+                    width="170"
+                    height="150"
+                    alt="burger"
+                  />
+                </div>
+              );
+            })}
+
+
+
+                
+          </div>
+
+          <div className="  flex flex-col  items-center justify-bottom">
+                  <h6 className=" font-serif hover:font-sans  text-white text-4xl ">
+                    35€ pour 40 pièces
+                  </h6>
+                  <p className="mb-4  font-serif hover:font-sans text-white ">
+                    8 pièces de chaque types
+                  </p>
+                  </div>
+
+          <button
           className={clsx(
             "rounded p-4 mb-10 ",
             " bg-gradient-to-r from-orange-400 to-rose-500 ",
@@ -77,9 +78,11 @@ function SectionSale() {
         >
           Commander 
         </button>
-      </div>
-    </section>
-  );
+          </div>
+                </div>
+                </section>
+              </main>
+            );
 }
 
 export default SectionSale;
