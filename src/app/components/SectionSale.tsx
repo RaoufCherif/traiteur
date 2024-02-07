@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import snack1 from "../../../public/snack1.png";
+import snack1 from "../../../public/mixt_sale_ia_1.png";
 import mini_burger from "../../../public/mini_burger.jpg";
 import mini_rols from "../../../public/mini_rol.jpg";
 import mini_piza from "../../../public/mini_pizza.jpg";
@@ -13,15 +13,24 @@ function SectionSale() {
   let data = fetchData();
 
   return (
-    <section className=" bg-rose-300 " id="sectionSale">
-      <div className="flex flex-col  items-center">
-        <h2 className="my-14  font-serif hover:font-sans  text-white text-4xl ">
+    <section className="relative bg-rose-300  " id="sectionSale">
+      <div className=" flex flex-col  items-center">
+     <div className=" ">
+        <Image src={snack1} width="1977" height="459" alt="background image"  className="" />
+        <div className=" flex  items-center justify-center">
+        <h2 className=" my-14  font-serif hover:font-sans  text-white text-4xl ">
           {" "}
           Mini Salés Faits Maison
-        </h2>
+        </h2> 
+        </div>
+        </div>
 
-        <Image src={snack1} width="1977" height="459" alt="background image" />
+        <div className=" relative flex flex-col  items-center">
+
+
         <h2 className="mt-20  font-serif hover:font-sans  text-white text-4xl ">
+     
+
           {" "}
           Cinq types de salés
         </h2>
@@ -57,6 +66,7 @@ function SectionSale() {
         <h6 className="mb-20  font-serif hover:font-sans text-white ">
           8 pièces de chaque types
         </h6>
+        </div>
         <button
           className={clsx(
             "rounded p-4 mb-10 ",

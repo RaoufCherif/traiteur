@@ -1,10 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import mini_sucre from "../../../public/mini_sucré.jpeg";
-import mini_burger from "../../../public/mini_burger.jpg";
-import mini_rols from "../../../public/mini_rol.jpg";
-import mini_piza from "../../../public/mini_pizza.jpg";
-import mini_brics from "../../../public/mini_brics.jpeg";
+import mini_sucre from "../../../public/mini_sucre_ia_1.png";
 import clsx from "clsx";
 
 import { fetchSucre } from "../../../util/getSucres";
@@ -12,8 +8,8 @@ import { fetchSucre } from "../../../util/getSucres";
 function SectionSucre() {
   let data = fetchSucre();
   return (
-    <section className=" bg-green-100 " id="sectionSucre">
-      <div className="flex flex-col  items-center">
+    <section className="relative bg-green-100 " id="sectionSucre">
+      <div className=" flex flex-col  items-center">
         <h2 className="my-14  font-serif hover:font-sans  text-rose-400 text-4xl ">
           {" "}
           Mini Sucrés Faits Maison
