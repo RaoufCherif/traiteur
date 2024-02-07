@@ -2,7 +2,7 @@
 import React from "react";
 import { Session } from "next-auth-user-session";
 import { useSession } from "next-auth/react";
-import Link from "next/link";
+import LogOutButton from "../components/LogOutButton";
 
 const Dashboard = () => {
   const { data: session, status } = useSession();
@@ -23,13 +23,7 @@ const Dashboard = () => {
             <p>Nom : {session.user.nom}</p>
             <p>Prenom : {session.user.prenom}</p>
           </div>
-
-          <Link
-            href="confirmation?token=1234&id=1578"
-            className="bg-blue-500 p-2 text-white rounded-md"
-          >
-            Confirm
-          </Link>
+          <LogOutButton />
         </section>
       ) : (
         <p> Vous êtes pas connecter</p>

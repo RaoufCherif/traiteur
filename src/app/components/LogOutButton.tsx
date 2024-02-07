@@ -1,5 +1,3 @@
-import { Button } from '@mui/material'
-import Link from 'next/link'
 import React from 'react'
 import { signOut } from "next-auth/react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,12 +5,14 @@ import { faSignOut } from '@fortawesome/free-solid-svg-icons'
 
 const LogOutButton = () => {
     const logOut = async () => {
-        await signOut({callbackUrl: process.env.NEXTAUTH_URL   });
+        await signOut({callbackUrl: process.env.SIGNOUT_LANDINGPAGE   });
+
+        console.log( process.env.SIGNOUT_LANDINGPAGE  , 'Je suis l URL');
       };
   return (
-    <Button variant="text" color="primary" className="mt-0 " data-testid={'logInButton'}  onClick={() => logOut()}>
+    <button  className=" bg-red-500 p-1 rounded-md"  onClick={() => logOut()}>
      <FontAwesomeIcon icon={faSignOut }  className=' w-7 text-white z-50' />
-  </Button>
+  </button>
   )
 }
 
