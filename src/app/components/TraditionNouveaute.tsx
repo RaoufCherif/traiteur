@@ -2,17 +2,25 @@ import React from "react";
 import Image from "next/image";
 import palm from "../../../public/palm.jpg";
 import snack from "../../../public/mixt_sale_ia.png";
+import tagine from "../../../public/tagine.png";
 
 function TraditionNouveaute() {
   return (
-    <section
-      className="  flex flex-col justify-center items-center p-12 "
-      id="traditionnel"
-    >
-      <h2 className="p-4 m-16 font-serif hover:font-sans  text-green-700 text-4xl ">
-        {" "}
-        Traditionnel
-      </h2>
+    <main className="">
+
+          {/* <section className="h-screen bg-sky-100 flex flex-col  items-center  bg-[url('../../public/tagine.png')] bg-no-repeat bg-cover  min-h-full" >
+     
+     
+     </section> */}
+
+     
+ 
+      <section   className="  flex flex-col justify-center items-center  "
+      id="traditionnel">
+
+<div>
+        <h2 className=' font-serif hover:font-sans text-green-700 text-4xl  mt-8 '>   Traditionnel</h2>
+        </div>
       <div className="mb-16 flex flex-row max-w-4xl">
         <Image
           id="image_rice"
@@ -44,7 +52,14 @@ function TraditionNouveaute() {
           </div>
         </div>
       </div>
-    </section>
+      </section>
+
+      <section className="h-screen bg-sky-100 flex flex-col  items-center  bg-[url('../../public/chef_ia.png')] bg-no-repeat bg-cover  min-h-full" >
+     
+     
+     </section>
+
+    </main>
   );
 }
 

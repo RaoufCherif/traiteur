@@ -22,13 +22,11 @@ function SectionSucre() {
     <section>
       <div className=" flex flex-col items-center  ">
         <h2 className="mt-12  font-serif hover:font-sans  text-rose-700 text-4xl ">
-          {" "}
           Cinq types de sucrés
         </h2>
-        <h6 className="mb-20  font-serif hover:font-sans  text-rose-700  ">
-          {" "}
+        <p className="mb-20  font-serif hover:font-sans  text-rose-700  ">
           DANS CHAQUE PLATEAU
-        </h6>
+        </p>
 
         <div className="flex flex-raw gap-10 mb-12">
           {data.map((item, index) => {
@@ -36,14 +34,15 @@ function SectionSucre() {
               //  <li key={index}>{item}</li>
 
               <div key={index} className=" flex flex-col items-center gap-4">
-                <h4 className="font-serif hover:font-sans  text-red-600 text-lg">
+                <h4 className="font-serif hover:font-sans  text-red-600 text-xl">
                   {item.name}
                 </h4>
                 <Image
                   src={"/" + item.image}
-                  width="170"
+                  width="250"
                   height="150"
                   alt="burger"
+                  className='rounded-xl'
                 />
               </div>
             );
@@ -54,9 +53,9 @@ function SectionSucre() {
         <h2 className=" font-serif hover:font-sans  text-rose-700 text-4xl ">
           35€ pour 40 pièces
         </h2>
-        <h6 className="mb-8  font-serif hover:font-sans text-rose-700 ">
+        <p className="mb-8  font-serif hover:font-sans text-rose-700 ">
           8 pièces de chaque types
-        </h6>
+        </p>
         <button
           className={clsx(
             "rounded  p-4 mb-12",
