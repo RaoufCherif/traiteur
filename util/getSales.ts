@@ -4,24 +4,25 @@ export const fetchData = () => {
   // const response = await delay(1000)
   const data = [
     {
-      name: "Mini Burgers",
+      name: " Burgers",
       image: "unSeulBurger_ia.png",
     },
     {
-      name: "Mini Pizzas",
-      image: "soumon_concombre.jpg",
+      name: " Saumons",
+      image: "mini_carre_mauve.png",
     },
+
     {
-      name: " Mini Brics",
-      image: "mini_rols_ia.png",
-    },
-    {
-      name: "Mini Rols",
+      name: "Rolls",
       image: "pain_soumon.jpg",
     },
     {
-      name: "Mini Croissants",
-      image: "pain_farsi_soumon.jpg",
+      name: "Pizzas",
+      image: "mini_pizza_ia.png",
+    },
+    {
+      name: " Thon",
+      image: "mini_bricks_thon_2.png",
     },
   ];
 

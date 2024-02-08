@@ -4,20 +4,24 @@ export const fetchSucre = () => {
     const data = [
         {
             name:"Mini Tiramisus",
-            image: "tiramisu.jpg"
+            image: "mini_tiramisus_ia.png"
         },
         {
-            name : "Mini Tartes",
-            image : "mini_tarte.jpg"            
+            name : "Mini Beignets",
+            image : "mini_dougnuts_ia.png"            
         },
         {
-            name : " Mini Flans",
-            image : "flan.jpeg"            
+            name : "Mini Cheesecakes " ,
+            image : "mini_desserts_ia.png"            
+        },
+        {
+            name :  " Mini Flans",
+            image : "mini_carre_mauve.png"
         },
         {
             name : "Mini Cheesecakes",
-            image : "cheesecake.jpeg"
-        }
+            image : "mixte_mini_desserts_ia.png"
+        },
     ];
 
     return data;
