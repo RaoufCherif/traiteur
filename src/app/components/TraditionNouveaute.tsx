@@ -7,13 +7,9 @@ import tagine from "../../../public/tagine.png";
 function TraditionNouveaute() {
   return (
     <main className="">
-
           {/* <section className="h-screen bg-sky-100 flex flex-col  items-center  bg-[url('../../public/tagine.png')] bg-no-repeat bg-cover  min-h-full" >
-     
-     
      </section> */}
 
-     
  
       <section   className="  flex flex-col justify-center items-center  "
       id="traditionnel">

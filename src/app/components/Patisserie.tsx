@@ -12,7 +12,7 @@ function Patisserie() {
 
     <section className="h-screen bg-sky-100 flex flex-col  items-center  bg-[url('../../public/beautiful_cakes_ia.png')] bg-no-repeat bg-cover  " >
         <div>
-        <h2 className=' font-serif hover:font-sans text-green-700 text-4xl  mt-48 '> Nos Patisserie</h2>
+        <h2 className=' font-serif hover:font-sans text-green-700 text-4xl  mt-48 '> Nos Patisseries Faites Maison</h2>
         </div>
      
         </section>

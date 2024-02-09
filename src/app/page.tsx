@@ -34,8 +34,9 @@ export default function Home() {
       <SectionSucre />
       <Patisserie />
       <TraditionNouveaute />
-      <NosValeurs />
+ 
       <NosSpecialite />
+      <NosValeurs />
       <AvisClients />
       <Footer />
     </main>
