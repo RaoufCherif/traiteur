@@ -11,12 +11,12 @@ function SectionSale() {
 
 
   return (
-    <main className=" bg-gradient-to-t from-amber-600 via-orange-300 to-rose-800  flex flex-col " >
+    <main className=" bg-gradient-to-t from-green-200 via-red-100 to-green-400  flex flex-col " >
 
       <section>
 
           <div  className=" flex justify-center   bg-[url('../../public/mixt_sale_ia_1.png')]    bg-no-repeat bg-cover min-h-screen min-w-screen"  >
-                  <h2 className=" font-serif hover:font-sans  text-white text-4xl pt-12">
+                  <h2 className=" font-serif hover:font-sans  text-rose-700 text-4xl pt-12">
                 
                     Mini Salés Faits Maison
                   </h2> 
@@ -28,10 +28,10 @@ function SectionSale() {
 
                 <div>
                 <div className=" mt-12 flex flex-col  items-center">
-          <h2 className=" font-serif hover:font-sans  text-white text-4xl ">
+          <h2 className=" font-serif hover:font-sans   text-rose-700 text-4xl ">
             Cinq types de salés
           </h2>
-          <h6 className="mb-20  font-serif hover:font-sans  text-white  ">
+          <h6 className="mb-20  font-serif hover:font-sans text-rose-700  ">
             DANS CHAQUE PLATEAU
           </h6>
 
@@ -41,7 +41,7 @@ function SectionSale() {
                 //  <li key={index}>{item}</li>
 
                 <div key={index} className=" flex flex-col items-center gap-4">
-                  <h4 className="  font-serif hover:font-sans  text-white text-lg">
+                  <h4 className="  font-serif hover:font-sans  text-rose-700 text-lg">
                     {item.name}
                   </h4>
                   <Image
@@ -60,10 +60,10 @@ function SectionSale() {
           </div>
 
           <div className="  flex flex-col  items-center justify-bottom">
-                  <h6 className=" font-serif hover:font-sans  text-white text-4xl ">
+                  <h6 className=" font-serif hover:font-sans  text-rose-700 text-4xl ">
                     35€ pour 40 pièces
                   </h6>
-                  <p className="mb-4  font-serif hover:font-sans text-white ">
+                  <p className="mb-4  font-serif hover:font-sans  text-rose-700">
                     8 pièces de chaque types
                   </p>
                   </div>
@@ -71,9 +71,9 @@ function SectionSale() {
           <button
           className={clsx(
             "rounded p-4 mb-10 ",
-            " bg-gradient-to-r from-blue-900 to-purpule-200 ",
+            "bg-gradient-to-r from-green-200 via-green-400 to-green-500",
             "text-white",
-            "hover:bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-rose-400 to-indigo-700",
+            "hover:bg-gradient-to-l from-green-500 to-green-700",
           )}
         >
           Commander 
