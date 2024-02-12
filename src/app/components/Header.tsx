@@ -27,8 +27,9 @@ const Header = () => {
 
   return (
     <div className="flex flex-raw   header  ">
-      <div className=" absolute left-0 ml-8 mt-8  text-white  text-2xl  hover:bg-orange-700 p-2 rounded-md "> 
-      <a href="/"> Clafête </a></div>
+      <div className=" absolute left-0 ml-8 mt-8  text-white  text-2xl  hover:bg-orange-700 p-2 rounded-md ">
+        <a href="/"> Clafête </a>
+      </div>
       <nav className="bg-gray-800   p-4 bg-orange-800 ">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
           <div className="relative flex h-16 items-center justify-between ">
@@ -82,38 +83,38 @@ const Header = () => {
               </button>
             </div>
 
-            <div className="flex flex-1 items-left justify-center sm:items-stretch sm:justify-start bg-amber-700 p-2">
+            <div className="flex items-left justify-center sm:items-stretch sm:justify-start bg-orange-800  rounded-md">
               <div className="hidden sm:ml-6 sm:block">
-                <div className="flex space-x-4">
+                <div className="flex space-x-2">
                   {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                   <a
                     href="#"
-                    className=" text-white hover:text-blue-900 hover:underline hover:italic rounded-md px-3 py-2 text-sm font-medium"
+                    className=" text-white hover:text-blue-900 hover:underline hover:italic rounded-md px-2 py-2 text-sm font-medium"
                     aria-current="page"
                   >
                     Accueil
                   </a>
                   <a
                     href="#sectionSale"
-                    className="text-white hover:text-blue-900 hover:underline hover:italic   rounded-md px-3 py-2 text-sm font-medium"
+                    className="text-white hover:text-blue-900 hover:underline hover:italic   rounded-md px-2 py-2 text-sm font-medium"
                   >
                     Salé
                   </a>
                   <a
                     href="#sectionSucre"
-                    className="text-white hover:text-blue-900 hover:underline hover:italic  rounded-md px-3 py-2 text-sm font-medium"
+                    className="text-white hover:text-blue-900 hover:underline hover:italic  rounded-md px-2 py-2 text-sm font-medium"
                   >
                     Sucré
                   </a>
                   <a
                     href="#patisserie"
-                    className="text-white hover:text-blue-900 hover:underline hover:italic  rounded-md px-3 py-2 text-sm font-medium"
+                    className="text-white hover:text-blue-900 hover:underline hover:italic  rounded-md px-2 py-2 text-sm font-medium"
                   >
                     Patisserie
                   </a>
                   <a
                     href="#traditionnel"
-                    className="text-white hover:text-blue-900 hover:underline hover:italic  rounded-md px-3 py-2 text-sm font-medium"
+                    className="text-white hover:text-blue-900 hover:underline hover:italic  rounded-md pr-6 py-2 text-sm font-medium"
                   >
                     Traditionnel
                   </a>
@@ -125,20 +126,15 @@ const Header = () => {
       </nav>
       <div className=" absolute right-0 inset-y-0  flex items-center sm:static sm:inset-auto sm:ml-6 sm:pr-0  mt-12 ">
         {status === "authenticated" ? (
-          
-            <div className=" absolute text-gray-300 right-0 hover:text-white rounded-md  py-2 text-sm font-medium  ">
-              {session?.user.prenom}
-              <LogOutButton />
-            </div>
-         
-          
+          <div className=" absolute text-gray-300 right-0 hover:text-white rounded-md  py-2 text-sm font-medium  ">
+            {session?.user.prenom}
+            <LogOutButton />
+          </div>
         ) : (
           <div className=" absolute right-0 flex gap-6  pr-12">
             <LogInButton />
             <SignUpButton />
-         
-            </div>
-        
+          </div>
         )}
       </div>
     </div>
