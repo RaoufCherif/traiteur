@@ -89,32 +89,32 @@ const Header = () => {
                   {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                   <a
                     href="#"
-                    className=" text-white hover:text-blue-900 hover:underline hover:italic rounded-md px-2 py-2 text-sm font-medium"
+                    className=" text-white hover:text-blue-900 rounded-md px-2 py-2 text-sm font-medium"
                     aria-current="page"
                   >
                     Accueil
                   </a>
                   <a
                     href="#sectionSale"
-                    className="text-white hover:text-blue-900 hover:underline hover:italic   rounded-md px-2 py-2 text-sm font-medium"
+                    className="text-white hover:text-blue-900   rounded-md px-2 py-2 text-sm font-medium"
                   >
                     Salé
                   </a>
                   <a
                     href="#sectionSucre"
-                    className="text-white hover:text-blue-900 hover:underline hover:italic  rounded-md px-2 py-2 text-sm font-medium"
+                    className="text-white hover:text-blue-900  rounded-md px-2 py-2 text-sm font-medium"
                   >
                     Sucré
                   </a>
                   <a
                     href="#patisserie"
-                    className="text-white hover:text-blue-900 hover:underline hover:italic  rounded-md px-2 py-2 text-sm font-medium"
+                    className="text-white hover:text-blue-900  rounded-md px-2 py-2 text-sm font-medium"
                   >
                     Patisserie
                   </a>
                   <a
                     href="#traditionnel"
-                    className="text-white hover:text-blue-900 hover:underline hover:italic  rounded-md pr-6 py-2 text-sm font-medium"
+                    className="text-white hover:text-blue-900  rounded-md pr-6 py-2 text-sm font-medium"
                   >
                     Traditionnel
                   </a>
