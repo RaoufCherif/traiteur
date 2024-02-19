@@ -1,16 +1,10 @@
 import React from "react";
-import man from "../../../public/smart_man_ia.png";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBreadSlice,
-  faGear,
-  faGears,
-  faGroupArrowsRotate,
-  faMedal,
-  faSignOut,
-} from "@fortawesome/free-solid-svg-icons";
 
+import exp from "../../../public/icones/exp.png";
+import qualite from "../../../public/icones/qualitative.png";
+import gout from "../../../public/icones/gout.png";
+import service from "../../../public/icones/service.png";
 const NosValeurs = () => {
   return (
     <main className="mb-24">
@@ -32,11 +26,11 @@ const NosValeurs = () => {
               Meilleur Qualité
             </h3>
 
-            <div className="flex flex-col gap-4 border-solid border-8 border-green-700  bg-black  p-8 hover:bg-[url('../../public/soumon_concombre.jpg')]">
+            <div className="flex flex-col gap-4 border-solid border-8 border-green-700  bg-white  p-8 hover:bg-[url('../../public/soumon_concombre.jpg')]">
               <div className="flex justify-center">
-                <FontAwesomeIcon icon={faMedal} className=" w-12 text-white " />
+                <Image src={qualite} width={60} height={0} alt={""} />
               </div>
-              <p className="text-slate-300  hover:text-black">
+              <p className="text-slate-900  hover:text-white">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -47,15 +41,12 @@ const NosValeurs = () => {
               Meilleur Service
             </h3>
 
-            <div className="flex flex-col gap-4 border-solid border-8 border-teal-500  bg-black  p-8 hover:bg-[url('../../public/pain_soumon.jpg')]">
+            <div className="flex flex-col gap-4 border-solid border-8 border-teal-500  bg-white  p-8 hover:bg-[url('../../public/pain_soumon.jpg')]">
               <div className="flex justify-center">
-                <FontAwesomeIcon
-                  icon={faGroupArrowsRotate}
-                  className=" w-12 text-white "
-                />
+                <Image src={service} width={60} height={0} alt={""} />
               </div>
 
-              <p className="text-slate-300   hover:text-black">
+              <p className="text-slate-900   hover:text-white">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -66,14 +57,11 @@ const NosValeurs = () => {
               {" "}
               Meilleur Goût
             </h3>
-            <div className="flex  flex-col border-solid border-8 border-orange-500  bg-black  p-8  gap-4  hover:bg-[url('../../public/tables_minis_sales_ia.png')]">
+            <div className="flex  flex-col border-solid border-8 border-orange-500  bg-white  p-8  gap-4  hover:bg-[url('../../public/mini_pizza.jpg')]">
               <div className="flex justify-center">
-                <FontAwesomeIcon
-                  icon={faBreadSlice}
-                  className=" w-12 text-white "
-                />
+                <Image src={gout} width={60} height={0} alt={""} />
               </div>
-              <p className="text-slate-300   hover:text-black ">
+              <p className="text-slate-900   hover:text-white ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
@@ -85,11 +73,11 @@ const NosValeurs = () => {
               Meilleur Experience
             </h3>
 
-            <div className="flex flex-col gap-4  border-solid  border-8 border-rose-900  bg-black  p-8 hover:bg-[url('../../public/mini_sucre_ia_2.png')]  hover:text-black min-h-7 ">
+            <div className="flex flex-col gap-4  border-solid  border-8 border-rose-900  bg-white  p-8 hover:bg-[url('../../public/tagine.png')]  hover:text-black min-h-7 ">
               <div className="flex justify-center">
-                <FontAwesomeIcon icon={faGears} className=" w-12 text-white " />
+                <Image src={exp} width={60} height={0} alt={""} />
               </div>
-              <p className="text-slate-300  ">
+              <p className="text-slate-900 hover:text-white  ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </p>
             </div>
