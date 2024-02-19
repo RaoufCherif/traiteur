@@ -15,7 +15,7 @@ function NosSpecialite() {
               Nos spécialités
             </h2>
           </section>
-          <section className="flex flex-row gap-12 mb-8 justify-center">
+          <section className="flex md:flex-row gap-12 mb-8 justify-center flex-col">
             <div className="flex flex-col  bg-black justify-between items-center p-4 w-52 h-72">
               <h3 className="text-white m-2">Traditionnel</h3>
               <Image
@@ -29,21 +29,29 @@ function NosSpecialite() {
             </div>
             <div className="flex flex-col  bg-black justify-between items-center  p-4 w-52 h-72 ">
               <h3 className="text-white m-2">Buffets </h3>
-              <Image src={snak} alt="chef" className="rounded-xl  h-48 hover:animate-jump-out" />
+              <Image
+                src={snak}
+                alt="chef"
+                className="rounded-xl  h-48 hover:animate-jump-out"
+              />
               <button className="text-white m-4 hover:animate-bounce">
                 Découvrir
               </button>
             </div>
             <div className="flex flex-col  bg-black justify-between items-center p-4  w-52 h-72 ">
               <h3 className="text-white m-2">Gâteaux </h3>
-              <Image src={sucre} alt="chef" className="rounded-xl  h-4/6 hover:animate-pulse " />
+              <Image
+                src={sucre}
+                alt="chef"
+                className="rounded-xl  h-4/6 hover:animate-pulse "
+              />
               <button className="text-white m-4  hover:animate-bounce">
                 Découvrir
               </button>
             </div>
           </section>
 
-          <section className="flex flex-row gap-8 bg-black justify-center w-fit">
+          <section className="flex md:flex-row flex-col gap-8 bg-black justify-center w-fit">
             <div className="m-8">
               <Image src={chef} width={1120} alt="chef" />
             </div>
