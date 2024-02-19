@@ -95,7 +95,7 @@ const Footer = () => {
       </section>
       <section className="bg-zinc-300  pt-4 items-center">
         <div className="flex flex-raw justify-around">
-          <form>
+          {/* <form>
             <div className="flex flex-raw ml-4 items-center">
               <p className="mr-2">Recevez notre newsletter</p>
               <input
@@ -119,7 +119,7 @@ const Footer = () => {
                 Ok{" "}
               </Link>
             </div>
-          </form>
+          </form> */}
           <div className="flex flex-raw gap-4 items-center">
             <p className="">Suivez-nous</p>
 

@@ -20,7 +20,7 @@ const NosValeurs = () => {
         {/* <Image src={man} width={100} height={100} alt="smart man" /> */}
       </section>
       <section className="mt-8 ">
-        <div className="  grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4  ml-8 mr-8 ">
+        <div className="  grid  md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4  ml-8 mr-8 ">
           <div className="flex flex-col items-center gap-6 m-2 p-4  ">
             <h3 className="text-slate-800 text-xl underline">
               Meilleur Qualité

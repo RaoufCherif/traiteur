@@ -13,7 +13,7 @@ function AvisClients() {
   return (
     <section className="flex flex-col items-center  gap-8 p-0 bg-green-100 ">
       <h2 className="text-2xl my-8"> Ce que disent nos clients</h2>
-      <section className="flex flex-raw gap-6 p-4 ">
+      <section className="flex flex-col md:flex-col lg:flex-row justify-center gap-6 p-4 ">
         {avis.map((item, index) => {
           let rating = item.rating;
           let ratingNu = (
@@ -25,7 +25,7 @@ function AvisClients() {
           return (
             <div
               key={index}
-              className=" flex flex-col items-center justify-center gap-2  max-w-[25%]"
+              className=" flex flex-col items-center justify-center gap-2 "
             >
               <Image
                 src={"/" + item.image}
@@ -56,11 +56,14 @@ function AvisClients() {
         Laisser un avis
       </h3>
 
-      <section className="flex flex-raw  w-full ">
-        <div className="flex flex-col bg-gradient-to-r from-orange-700 to-orange-500  w-1/2 justify-center items-center ">
+      <section className="w-full h-fit bg-[url('../../public/tagine.png')]">
+        {/* <div className="flex flex-col bg-gradient-to-r from-orange-700 to-orange-500  w-1/2 justify-center items-center ">
           <div className=" mt-0 mb-16 flex flex-col items-center justify-center">
-          <h6 className="text-white"> Notre objectif est de vous satisfaire</h6>
-          <p className="text-white text-xs "> Chaque avis compte!</p>
+            <h6 className="text-white">
+              {" "}
+              Notre objectif est de vous satisfaire
+            </h6>
+            <p className="text-white text-xs "> Chaque avis compte!</p>
           </div>
           <form action={""} className={clsx("flex flex-col gap-4")}>
             <label className="text-white">Rate :</label>
@@ -79,7 +82,7 @@ function AvisClients() {
               required
             />
 
-            <label className="text-white" >Avis :</label>
+            <label className="text-white">Avis :</label>
             <textarea
               name="avis"
               id="avis"
@@ -87,25 +90,20 @@ function AvisClients() {
               className={clsx(
                 "placeholder:text-gray-500",
                 "border-transparent border-b-amber-900 bg-transparent text-white",
-          
-               
               )}
               required
             />
-            
-           
-          
-         
+
             <div className="flex flex-raw gap-2 justify-center justify-between">
               <Button type="submit" variant="contained" className="mt-4">
                 Valider
               </Button>
             </div>
           </form>
-        </div>
-        <div className="w-1/2">
-          <Image src={burgerIa} width={1200} alt="spagiti" />
-        </div>
+        </div> */}
+        {/* <div className="">
+          <Image src={burgerIa} alt="spagiti" />
+        </div> */}
       </section>
     </section>
   );
