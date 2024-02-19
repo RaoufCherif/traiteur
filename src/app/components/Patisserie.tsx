@@ -1,23 +1,22 @@
-import React from 'react';
-import Image from 'next/image';
-import gateau from "../../../public/beautiful_cakes_ia.png"
-import clsx from 'clsx';
-import { fetchData } from '../../../util/getCakes';
-
+import React from "react";
+import Image from "next/image";
+import gateau from "../../../public/beautiful_cakes_ia.png";
+import clsx from "clsx";
+import { fetchData } from "../../../util/getCakes";
 
 function Patisserie() {
   let data = fetchData();
   return (
     <main className=" bg-gradient-to-t from-green-300 via-amber-400 to-green-300  flex flex-col ">
-
-      <section className="h-screen bg-sky-100 flex flex-col  items-center  bg-[url('../../public/beautiful_cakes_ia.png')] bg-no-repeat bg-cover  " >
+      <section className="h-screen bg-sky-100 flex flex-col  items-center  bg-[url('../../public/beautiful_cakes_ia.png')] bg-no-repeat bg-cover  ">
         <div>
-          <h2 className=' font-serif hover:font-sans text-green-700 text-4xl  mt-48 '> Nos Patisseries Faites Maison</h2>
+          <h2 className=" font-serif hover:font-sans text-green-700 text-4xl  mt-48 ">
+            {" "}
+            Nos Patisseries Faites Maison
+          </h2>
         </div>
-
       </section>
       <section>
-
         <div>
           <div className=" mt-12 flex flex-col  items-center">
             <h2 className=" font-serif hover:font-sans  text-white text-4xl ">
@@ -32,7 +31,10 @@ function Patisserie() {
                 return (
                   //  <li key={index}>{item}</li>
 
-                  <div key={index} className=" flex flex-col items-center gap-4 ">
+                  <div
+                    key={index}
+                    className=" flex flex-col items-center gap-4 "
+                  >
                     <h4 className="  font-serif hover:font-sans  text-white text-2xl">
                       {item.name}
                     </h4>
@@ -41,15 +43,11 @@ function Patisserie() {
                       width="280"
                       height="150"
                       alt="burger"
-                      className='rounded-xl'
+                      className="rounded-xl"
                     />
                   </div>
                 );
               })}
-
-
-
-
             </div>
 
             <div className="  flex flex-col  items-center justify-bottom">
@@ -64,9 +62,9 @@ function Patisserie() {
             <button
               className={clsx(
                 "rounded p-4 mb-10 ",
-                " bg-gradient-to-r from-green-400 via-green-500 to-green-500",
+                // "hover:bg-gradient-to-r from-green-400 via-green-400 to-green-500",
                 "text-white",
-                "hover:bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-green-700 to-amber-400",
+                "delay-300 duration-300 ease-in-out bg-green-700 hover:-translate-y-1 hover:transition hover:bg-gradient-to-r from-green-300 via-green-500 to-green-900 duration-100 hover:text-green-500",
               )}
             >
               Commander
@@ -74,10 +72,8 @@ function Patisserie() {
           </div>
         </div>
       </section>
-
     </main>
-
-  )
+  );
 }
 
 export default Patisserie;

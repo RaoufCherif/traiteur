@@ -57,12 +57,12 @@ function SectionSucre() {
           8 pièces de chaque types
         </p>
         <button
-          className={clsx(
-            "rounded  p-4 mb-12",
-            "bg-gradient-to-r from-green-200 via-green-400 to-green-500 ",
-            "hover:bg-gradient-to-l from-green-500 to-green-700",
-            "text-white",
-          )}
+               className={clsx(
+                "rounded p-4 mb-10 ",
+                // "hover:bg-gradient-to-r from-green-400 via-green-400 to-green-500",
+                "text-white",
+                "delay-300 duration-300 ease-in-out bg-green-700 hover:-translate-y-1 hover:transition hover:bg-gradient-to-r from-green-300 via-green-500 to-green-900 duration-100 hover:text-green-500",
+              )}
         >
           Commander
         </button>
